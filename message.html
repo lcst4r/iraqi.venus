@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="الرسائل في Venus"
+    >
+
+    <title>الرسائل | Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="message.css">
+</head>
+
+<body>
+
+    <main
+        class="venus-messages-page"
+        data-messages-page
+    >
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <header class="messages-header">
+
+            <a
+                href="home.html"
+                class="messages-back"
+                aria-label="العودة إلى الرئيسية"
+            >
+                <span>→</span>
+                <span>الرئيسية</span>
+            </a>
+
+            <div class="messages-title-area">
+
+                <span class="messages-eyebrow">
+                    VENUS
+                </span>
+
+                <h1 class="messages-title">
+                    الرسائل
+                </h1>
+
+                <p class="messages-subtitle">
+                    تواصل مع الآخرين وشارك أفكارك.
+                </p>
+
+            </div>
+
+            <div
+                class="messages-symbol"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             MAIN MESSAGES LAYOUT
+             ===================================================== -->
+
+        <section class="messages-layout">
+
+
+            <!-- =================================================
+                 CONVERSATIONS
+                 ================================================= -->
+
+            <aside class="messages-sidebar">
+
+                <div class="messages-sidebar-header">
+
+                    <div>
+                        <span class="messages-sidebar-kicker">
+                            محادثاتك
+                        </span>
+
+                        <h2>
+                            الرسائل
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="newMessageButton"
+                        class="messages-new-button"
+                        aria-label="رسالة جديدة"
+                        title="رسالة جديدة"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="messages-search">
+
+                    <span
+                        class="messages-search-icon"
+                        aria-hidden="true"
+                    >
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="messageSearch"
+                        class="messages-search-input"
+                        placeholder="ابحث في المحادثات..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div
+                    id="conversationsList"
+                    class="conversations-list"
+                >
+
+                    <div
+                        id="conversationsEmpty"
+                        class="messages-empty conversations-empty"
+                    >
+
+                        <span class="messages-empty-icon">
+                            ◇
+                        </span>
+
+                        <h3>
+                            لا توجد محادثات
+                        </h3>
+
+                        <p>
+                            ابدأ محادثة جديدة مع أحد المستخدمين.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+                 CHAT
+                 ================================================= -->
+
+            <section class="messages-chat">
+            <!-- Empty state -->
+
+                <div
+                    id="chatEmpty"
+                    class="chat-empty"
+                >
+
+                    <div
+                        class="chat-empty-symbol"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </div>
+
+                    <h2>
+                        اختر محادثة
+                    </h2>
+
+                    <p>
+                        اختر محادثة من القائمة للبدء.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="emptyNewMessageButton"
+                        class="messages-primary-button"
+                    >
+                        رسالة جديدة
+                    </button>
+
+                </div>
+
+
+                <!-- Active chat -->
+
+                <div
+                    id="activeChat"
+                    class="active-chat"
+                    hidden
+                >
+
+                    <!-- Chat header -->
+
+                    <header class="chat-header">
+
+                        <button
+                            type="button"
+                            id="mobileBackToConversations"
+                            class="mobile-chat-back"
+                            aria-label="العودة إلى المحادثات"
+                        >
+                            →
+                        </button>
+
+                        <div
+                            id="chatUserAvatar"
+                            class="chat-user-avatar"
+                        >
+                            <span id="chatUserInitial">
+                                V
+                            </span>
+                        </div>
+
+                        <div class="chat-user-info">
+
+                            <h2 id="chatUserName">
+                                مستخدم Venus
+                            </h2>
+
+                            <p id="chatUserUsername">
+                                @venus
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- Messages -->
+
+                    <div
+                        id="messagesContainer"
+                        class="messages-container"
+                        aria-live="polite"
+                    >
+
+                        <div
+                            id="messagesLoading"
+                            class="messages-loading"
+                            hidden
+                        >
+                            جاري تحميل الرسائل...
+                        </div>
+
+                        <div
+                            id="messagesEmpty"
+                            class="chat-messages-empty"
+                            hidden
+                        >
+
+                            <span>
+                                ✦
+                            </span>
+
+                            <p>
+                                لا توجد رسائل بعد.
+                            </p>
+
+                            <small>
+                                ابدأ المحادثة برسالة جديدة.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Composer -->
+
+                    <form
+                        id="messageForm"
+                        class="message-composer"
+                    >
+
+                        <button
+                            type="button"
+                            id="messageAttachButton"
+                            class="message-composer-button"
+                            aria-label="إضافة ملف"
+                            title="إضافة ملف"
+                        >
+                            ＋
+                        </button>
+
+                        <input
+                            type="file"
+                            id="messageAttachment"
+                            hidden
+                        >
+
+                        <textarea
+                            id="messageInput"
+                            class="message-input"
+                            rows="1"
+                            maxlength="2000"
+                            placeholder="اكتب رسالة..."
+                            aria-label="نص الرسالة"
+                        ></textarea>
+
+                        <button
+                            type="submit"
+                            id="sendMessageButton"
+                            class="message-send-button"
+                            aria-label="إرسال الرسالة"
+                            title="إرسال"
+                        >
+                            ↑
+                        </button>
+
+                    </form>
+
+                    <p
+                        id="messageFormMessage"
+                        class="message-form-message"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEW MESSAGE MODAL
+             ===================================================== -->
+
+        <div
+            id="newMessageModal"
+            class="message-modal"
+            aria-hidden="true"
+        >
+
+            <div
+                id="closeNewMessageOverlay"
+                class="message-modal-overlay"
+            ></div>
+
+            <div
+                class="message-modal-card"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="newMessageTitle"
+            >
+
+                <button
+                    type="button"
+                    id="closeNewMessage"
+                    class="message-modal-close"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+                <div
+                    class="message-modal-symbol"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <h2 id="newMessageTitle">
+                    رسالة جديدة
+                </h2>
+
+                <p class="message-modal-description">
+                    ابحث عن المستخدم الذي تريد مراسلته.
+                </p>
+
+
+                <div class="new-message-search">
+
+                    <span aria-hidden="true">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="newMessageSearch"
+                        placeholder="ابحث بالاسم أو اسم المستخدم..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div
+                    id="newMessageUsers"
+                    class="new-message-users"
+                >
+
+                    <div
+                        id="newMessageUsersEmpty"
+                        class="new-message-empty"
+                    >
+                        ابدأ بالبحث عن مستخدم.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer class="messages-footer">
+
+            <div class="messages-footer-brand">
+
+                <span>
+                    ✦
+                </span>
+
+                <strong>
+                    VENUS
+                </strong>
+
+            </div>
+
+            <p>
+                مساحة للأفكار، المشاريع، والإنجازات.
+            </p>
+
+            <div class="messages-footer-links">
+
+                <a href="home.html">
+                    الرئيسية
+                </a>
+
+                <a href="profile.html">
+                    الملف الشخصي
+                </a>
+
+                <a href="search.html">
+                    البحث
+                </a>
+
+                <a href="settings.html">
+                    الإعدادات
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="message.js"></script>
+
+</body>
+</html>

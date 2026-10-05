@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Venus — Teams</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         VENUS — TEAM PAGE
+         ===================================================== -->
+
+    <main
+        class="venus-team-page"
+        data-team-page
+    >
+
+        <!-- -------------------------------------------------
+             HEADER
+             ------------------------------------------------- -->
+
+        <section class="venus-team-header">
+
+            <div>
+                <span class="venus-section-label">
+                    VENUS
+                </span>
+
+                <h1>
+                    الفرق
+                </h1>
+
+                <p>
+                    كوّن فريقك، انضم إلى فريق،
+                    واصنعوا شيئًا يستحق أن يُذكر.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                id="openCreateTeam"
+                class="venus-primary-button"
+            >
+                + إنشاء فريق
+            </button>
+
+        </section>
+
+
+        <!-- -------------------------------------------------
+             MY TEAM
+             ------------------------------------------------- -->
+
+        <section
+            id="myTeamSection"
+            class="venus-team-section"
+        >
+
+            <div class="venus-section-heading">
+
+                <h2>
+                    فريقي
+                </h2>
+
+            </div>
+
+            <div
+                id="myTeamContainer"
+                class="venus-team-container"
+            >
+                <!-- My team appears here -->
+            </div>
+
+        </section>
+
+
+        <!-- -------------------------------------------------
+             SEARCH
+             ------------------------------------------------- -->
+
+        <section class="venus-team-search">
+
+            <input
+                type="search"
+                id="teamSearch"
+                placeholder="ابحث عن فريق..."
+                autocomplete="off"
+            >
+
+        </section>
+
+
+        <!-- -------------------------------------------------
+             ALL TEAMS
+             ------------------------------------------------- -->
+
+        <section class="venus-team-section">
+
+            <div class="venus-section-heading">
+
+                <h2>
+                    اكتشف الفرق
+                </h2>
+
+                <span id="teamCount">
+                    0 فريق
+                </span>
+
+            </div>
+
+            <div
+                id="teamsContainer"
+                class="venus-teams-grid"
+            >
+                <!-- Teams appear here -->
+            </div>
+
+        </section>
+
+
+        <!-- -------------------------------------------------
+             CREATE TEAM MODAL
+             ------------------------------------------------- -->
+
+        <div
+            id="createTeamModal"
+            class="venus-modal"
+            hidden
+        >
+
+            <div
+                class="venus-modal-overlay"
+                id="closeCreateTeamOverlay"
+            ></div>
+
+
+            <div class="venus-modal-card">
+
+                <button
+                    type="button"
+                    class="venus-modal-close"
+                    id="closeCreateTeam"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+                <span class="venus-section-label">
+                    VENUS TEAM
+                </span>
+
+                <h2>
+                    إنشاء فريق جديد
+                </h2>
+
+                <p>
+                    اختر اسمًا لفريقك وابدأوا الرحلة.
+                </p>
+
+
+                <!-- Team name -->
+
+                <label for="teamName">
+                    اسم الفريق
+                </label>
+
+                <input
+                    type="text"
+                    id="teamName"
+                    maxlength="40"
+                    placeholder="اسم الفريق"
+                >
+
+
+                <!-- Description -->
+
+                <label for="teamDescription">
+                    نبذة عن الفريق
+                </label>
+
+                <textarea
+                    id="teamDescription"
+                    maxlength="200"
+                    placeholder="ما الذي يمثله فريقكم؟"
+                ></textarea>
+
+
+                <!-- Privacy -->
+
+                <label for="teamPrivacy">
+                    الخصوصية
+                </label>
+
+                <select id="teamPrivacy">
+
+                    <option value="public">
+                        عام — يستطيع الجميع الانضمام
+                    </option>
+
+                    <option value="private">
+                        خاص — لا يمكن الانضمام مباشرة
+                    </option>
+
+                </select>
+
+
+                <!-- Error / success -->
+
+                <p
+                    id="teamFormMessage"
+                    class="venus-form-message"
+                    hidden
+                ></p>
+
+
+                <!-- Create -->
+
+                <button
+                    type="button"
+                    id="createTeamButton"
+                    class="venus-primary-button"
+                >
+                    إنشاء الفريق
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- -------------------------------------------------
+             TEAM DETAILS MODAL
+             ------------------------------------------------- -->
+
+        <div
+            id="teamDetailsModal"
+            class="venus-modal"
+            hidden
+        >
+
+            <div
+                class="venus-modal-overlay"
+                id="closeTeamDetailsOverlay"
+            ></div>
+
+
+            <div class="venus-modal-card venus-team-details">
+
+                <button
+                    type="button"
+                    class="venus-modal-close"
+                    id="closeTeamDetails"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+
+                <div
+                    id="teamDetailsContainer"
+                >
+                    <!-- Team details -->
+                </div>
+
+
+                <div
+                    id="teamMembersContainer"
+                    class="venus-team-members"
+                >
+                    <!-- Members -->
+                </div>
+
+
+                <div
+                    class="venus-team-actions"
+                    id="teamActions"
+                >
+                    <!-- Join / leave button -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="teams.js"></script>
+    <script src="team-page.js"></script>
+
+</body>
+
+</html>

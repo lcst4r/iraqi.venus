@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسجيل الدخول — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="venus-login-page">
+
+        <!-- =====================================================
+             BRAND
+             ===================================================== -->
+
+        <section class="login-brand">
+
+            <div class="login-symbol" aria-hidden="true">
+                ✦
+            </div>
+
+            <div class="login-brand-name">
+                VENUS
+            </div>
+
+            <p class="login-brand-subtitle">
+                مساحة للأفكار، المشاريع، والإنجازات
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOGIN CARD
+             ===================================================== -->
+
+        <section class="login-card">
+
+            <div class="login-card-header">
+                <span class="login-eyebrow">
+                    أهلاً بعودتك
+                </span>
+
+                <h1>
+                    تسجيل الدخول
+                </h1>
+
+                <p>
+                    سجّل الدخول للمتابعة إلى Venus
+                </p>
+            </div>
+
+
+            <!-- =================================================
+                 FORM
+                 ================================================= -->
+
+            <form id="loginForm" class="login-form" novalidate>
+
+                <div class="login-field">
+
+                    <label for="loginIdentifier">
+                        اسم المستخدم أو البريد الإلكتروني
+                    </label>
+
+                    <input
+                        type="text"
+                        id="loginIdentifier"
+                        name="identifier"
+                        placeholder="أدخل اسم المستخدم أو البريد الإلكتروني"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-field">
+
+                    <label for="loginPassword">
+                        كلمة المرور
+                    </label>
+
+                    <div class="login-password-wrap">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="أدخل كلمة المرور"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleLoginPassword"
+                            class="login-password-toggle"
+                            aria-label="إظهار كلمة المرور"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="loginFormMessage"
+                    class="login-form-message"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="venus-button login-submit-button"
+                >
+                    تسجيل الدخول
+                </button>
+
+            </form>
+
+
+            <!-- =================================================
+                 REGISTER LINK
+                 ================================================= -->
+
+            <div class="login-register-area">
+
+                <span>
+                    ما عندك حساب؟
+                </span>
+
+                <a href="register.html" id="goToRegister">
+                    إنشاء حساب
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+        FOOTER
+             ===================================================== -->
+
+        <footer class="login-footer">
+
+            <a href="index.html">
+                العودة إلى Venus
+            </a>
+
+            <span>•</span>
+
+            <span>
+                Venus
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         SCRIPT
+         ========================================================= -->
+
+    <script src="login.js"></script>
+
+</body>
+</html>

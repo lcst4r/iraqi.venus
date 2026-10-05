@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>المسابقة — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="competition.css">
+</head>
+
+<body>
+
+    <main class="venus-competition-page" data-competition-page>
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <header class="competition-header">
+
+            <div class="competition-brand">
+
+                <a href="home.html" class="competition-back">
+                    ←
+                    <span>الرئيسية</span>
+                </a>
+
+                <div class="competition-title-area">
+
+                    <div class="competition-symbol">
+                        ✦
+                    </div>
+
+                    <div>
+                        <span class="competition-kicker">
+                            VENUS ANNUAL COMPETITION
+                        </span>
+
+                        <h1>المسابقة السنوية</h1>
+
+                        <p>
+                            مساحة للإنجاز، الإبداع والمنافسة.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="competition-status" id="competitionStatus">
+                <span class="competition-status-dot"></span>
+                <span id="competitionStatusText">
+                    الموسم الحالي
+                </span>
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <section class="competition-hero">
+
+            <div class="competition-hero-content">
+
+                <span class="competition-hero-label">
+                    VENUS ✦ IRAQ
+                </span>
+
+                <h2>
+                    إنجازاتك تتحول إلى نجوم.
+                </h2>
+
+                <p>
+                    شارك بالمقالات، التطوع، المشاريع والإنجازات،
+                    واجمع النجوم ضمن الترتيب الفردي أو مع فريقك.
+                </p>
+
+                <div class="competition-hero-actions">
+
+                    <button
+                        type="button"
+                        id="openCompetitionRegistration"
+                        class="competition-primary-button"
+                    >
+                        التسجيل في المسابقة
+                    </button>
+
+                    <button
+                        type="button"
+                        id="openCompetitionRules"
+                        class="competition-secondary-button"
+                    >
+                        القواعد والتفاصيل
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="competition-hero-star" aria-hidden="true">
+                ✦
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DATE / SEASON
+             ===================================================== -->
+
+        <section class="competition-section">
+
+            <div class="competition-section-heading">
+
+                <div>
+                    <span class="competition-section-kicker">
+                        Academic Year
+                    </span>
+
+                    <h2>
+                        الموسم الدراسي
+                    </h2>
+                </div>
+
+                <span class="competition-heading-symbol">
+                    ✧
+                </span>
+
+            </div>
+
+            <div class="competition-season-grid">
+
+                <article class="competition-season-card">
+
+                    <span class="competition-season-icon">
+                        ◷
+                    </span>
+
+                    <div>
+                        <span>البداية</span>
+                        <strong id="competitionStartDate">
+                            بداية السنة الدراسية
+                            </strong>
+                    </div>
+
+                </article>
+
+                <article class="competition-season-card">
+
+                    <span class="competition-season-icon">
+                        ◷
+                    </span>
+
+                    <div>
+                        <span>إغلاق المشاركات</span>
+                        <strong id="competitionCloseDate">
+                            شهر 4
+                        </strong>
+                    </div>
+
+                </article>
+
+                <article class="competition-season-card competition-result-card">
+
+                    <span class="competition-season-icon">
+                        ♛
+                    </span>
+
+                    <div>
+                        <span>إعلان النتائج</span>
+                        <strong id="competitionResultDate">
+                            24 / 4
+                        </strong>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERSONAL STATUS
+             ===================================================== -->
+
+        <section class="competition-section">
+
+            <div class="competition-section-heading">
+
+                <div>
+                    <span class="competition-section-kicker">
+                        Your Progress
+                    </span>
+
+                    <h2>
+                        المشاركة الشخصية
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="competition-progress-card">
+
+                <div class="competition-user-info">
+
+                    <div
+                        class="competition-user-avatar"
+                        id="competitionUserAvatar"
+                    >
+                        <span id="competitionUserInitial">
+                            V
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <span class="competition-user-label">
+                            المشارك
+                        </span>
+
+                        <h3 id="competitionUserName">
+                            متطوع Venus
+                        </h3>
+
+                        <p id="competitionUserSchool">
+                            لم تتم إضافة المدرسة بعد.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="competition-user-stars">
+
+                    <strong id="competitionUserStars">
+                        0
+                    </strong>
+
+                    <span>
+                        ★ نجمة
+                    </span>
+
+                </div>
+
+                <div class="competition-registration-state">
+
+                    <span
+                        id="competitionRegistrationBadge"
+                        class="competition-registration-badge"
+                    >
+                        غير مسجل
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HOW TO EARN STARS
+             ===================================================== -->
+
+        <section class="competition-section">
+
+            <div class="competition-section-heading">
+
+                <div>
+                    <span class="competition-section-kicker">
+                        Star System
+                    </span>
+
+                    <h2>
+                        كيف تُجمع النجوم؟
+                    </h2>
+                </div>
+
+                <span class="competition-heading-symbol">
+                    ★
+                </span>
+
+            </div>
+
+            <div class="competition-stars-grid">
+
+                <article class="competition-star-card">
+
+                    <div class="competition-star-icon">
+                        ✎
+                    </div>
+
+                    <div>
+                        <h3>مقال</h3>
+                        <p>
+                            نشر مقال أو محتوى معرفي.
+                        </p>
+                    </div>
+
+                    <strong>
+                        +1 ★
+                    </strong>
+
+                </article>
+
+
+                <article class="competition-star-card">
+
+                    <div class="competition-star-icon">
+                        ♧
+                    </div>
+
+                    <div>
+                        <h3>تطوع</h3>
+                        <p>
+                            مشاركة نشاط أو مبادرة تطوعية.
+                        </p>
+                    </div>
+
+                    <strong>
+                        +3 ★
+                    </strong>
+
+                </article>
+
+
+                <article class="competition-star-card">
+
+                    <div class="competition-star-icon">
+                        ◆
+                    </div>
+
+                    <div>
+                        <h3>مشروع كبير</h3>
+                        <p>
+                            مشروع أو مبادرة تستحق التوثيق.
+                        </p>
+                    </div>
+
+                    <strong>
+                        +5 ★
+                    </strong>
+
+                </article>
+
+
+                <article class="competition-star-card">
+
+                    <div class="competition-star-icon">
+                        ★
+                    </div>
+
+                    <div>
+                        <h3>إنجاز أو مسابقة أخرى</h3>
+                        <p>
+                            مثل الرسم أو البرمجة أو مسابقات أخرى.
+                        </p>
+                    </div>
+
+                    <strong>
+                        +5 ★
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LEADERBOARDS
+             ===================================================== -->
+
+        <section class="competition-section">
+
+            <div class="competition-section-heading">
+
+                <div>
+                    <span class="competition-section-kicker">
+                        Leaderboards
+                    </span>
+
+                    <h2>
+                        الترتيب
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="competition-leaderboard-tabs">
+
+                <button
+                    type="button"
+                    class="competition-leaderboard-tab active"
+                    data-leaderboard="individual"
+                >
+                    الترتيب الفردي
+                </button>
+
+                <button
+                    type="button"
+                    class="competition-leaderboard-tab"
+                    data-leaderboard="teams"
+                >
+                    ترتيب الفرق
+                </button>
+
+            </div>
+
+
+            <!-- Individual leaderboard -->
+
+            <div
+                id="individualLeaderboard"
+                class="competition-leaderboard"
+            >
+
+                <div class="competition-leaderboard-header">
+                    <span>#</span>
+                    <span>المشارك</span>
+                    <span>النجوم</span>
+                </div>
+
+                <div
+                    id="individualLeaderboardList"
+                    class="competition-leaderboard-list"
+                ></div>
+
+                <div
+                    id="individualLeaderboardEmpty"
+                    class="competition-leaderboard-empty"
+                    hidden
+                >
+                    <span>★</span>
+                    <p>
+                        لا توجد بيانات ترتيب حاليًا.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Team leaderboard -->
+
+            <div
+                id="teamLeaderboard"
+                class="competition-leaderboard"
+                hidden
+            >
+
+                <div class="competition-leaderboard-header">
+                    <span>#</span>
+                    <span>الفريق</span>
+                    <span>النجوم</span>
+                </div>
+
+                <div
+                    id="teamLeaderboardList"
+                    class="competition-leaderboard-list"
+                ></div>
+
+                <div
+                    id="teamLeaderboardEmpty"
+                    class="competition-leaderboard-empty"
+                    hidden
+                >
+                    <span>♧</span>
+                    <p>
+                        لا توجد فرق مسجلة حاليًا.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RULES PREVIEW
+             ===================================================== -->
+
+        <section class="competition-section">
+
+            <div class="competition-rules-card">
+
+                <div class="competition-rules-icon">
+                    ♜
+                </div>
+
+                <div class="competition-rules-content">
+
+                    <span class="competition-section-kicker">
+                        Important
+                    </span>
+
+                    <h2>
+                        قبل التسجيل
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            المسابقة مخصصة للمشاركين داخل العراق.
+                        </li>
+
+                        <li>
+                            يجب إدخال المدرسة أو الجامعة والمحافظة.
+                        </li>
+
+                        <li>
+                            الاسم الثلاثي مطلوب عند التسجيل للشهادة.
+                        </li>
+
+                        <li>
+                            يمكن استخدام اسم مستعار بشكل منفصل
+                            حسب إعدادات الخصوصية.
+                        </li>
+
+                        <li>
+                            يمكن الانضمام إلى فريق واحد فقط.
+                        </li>
+
+                        <li>
+                            نجوم الفريق تُحسب من مجموع نجوم أعضائه.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="viewFullRules"
+                    class="competition-outline-button"
+                >
+                    عرض القواعد كاملة
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             REGISTRATION MODAL
+             ===================================================== -->
+
+        <div
+            id="competitionRegistrationModal"
+            class="competition-modal"
+            hidden
+        >
+
+            <div
+                class="competition-modal-overlay"
+                id="closeCompetitionRegistrationOverlay"
+            ></div>
+
+            <div
+                class="competition-modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="competitionRegistrationTitle"
+            >
+
+                <button
+                    type="button"
+                    id="closeCompetitionRegistration"
+                    class="competition-modal-close"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+                <div class="competition-modal-heading">
+
+                    <span>✦</span>
+
+                    <div>
+                        <span class="competition-section-kicker">
+                            VENUS COMPETITION
+                        </span>
+
+                        <h2 id="competitionRegistrationTitle">
+                            التسجيل في المسابقة
+                        </h2>
+                    </div>
+
+                </div>
+
+                <form
+                    id="competitionRegistrationForm"
+                    class="competition-form"
+                >
+
+                    <div class="competition-form-group">
+
+                        <label for="competitionFullName">
+                            الاسم الثلاثي للشهادة
+                        </label>
+                        <input
+                            type="text"
+                            id="competitionFullName"
+                            name="fullName"
+                            placeholder="الاسم الأول، اسم الأب، اسم العائلة"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small>
+                            يُستخدم الاسم الرسمي عند إصدار الشهادة.
+                        </small>
+
+                    </div>
+
+
+                    <div class="competition-form-row">
+
+                        <div class="competition-form-group">
+
+                            <label for="competitionNickname">
+                                الاسم المستعار
+                            </label>
+
+                            <input
+                                type="text"
+                                id="competitionNickname"
+                                name="nickname"
+                                placeholder="اختياري"
+                            >
+
+                        </div>
+
+
+                        <div class="competition-form-group">
+
+                            <label for="competitionAge">
+                                العمر
+                            </label>
+
+                            <input
+                                type="number"
+                                id="competitionAge"
+                                name="age"
+                                min="5"
+                                max="100"
+                                placeholder="العمر"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="competition-form-group">
+
+                        <label for="competitionGovernorate">
+                            المحافظة
+                        </label>
+
+                        <select
+                            id="competitionGovernorate"
+                            name="governorate"
+                            required
+                        >
+
+                            <option value="">
+                                اختيار المحافظة
+                            </option>
+
+                            <option value="baghdad">
+                                بغداد
+                            </option>
+
+                            <option value="anbar">
+                                الأنبار
+                            </option>
+
+                            <option value="basra">
+                                البصرة
+                            </option>
+
+                            <option value="nineveh">
+                                نينوى
+                            </option>
+
+                            <option value="erbil">
+                                أربيل
+                            </option>
+
+                            <option value="sulaymaniyah">
+                                السليمانية
+                            </option>
+
+                            <option value="duhok">
+                                دهوك
+                            </option>
+
+                            <option value="kirkuk">
+                                كركوك
+                            </option>
+
+                            <option value="saladin">
+                                صلاح الدين
+                            </option>
+
+                            <option value="diyala">
+                                ديالى
+                            </option>
+
+                            <option value="najaf">
+                                النجف
+                            </option>
+
+                            <option value="karbala">
+                                كربلاء
+                            </option>
+
+                            <option value="babylon">
+                                بابل
+                            </option>
+
+                            <option value="wasit">
+                                واسط
+                            </option>
+                            <option value="maysan">
+                                ميسان
+                            </option>
+
+                            <option value="dhiqar">
+                                ذي قار
+                            </option>
+
+                            <option value="muthanna">
+                                المثنى
+                            </option>
+
+                            <option value="qadisiyyah">
+                                القادسية
+                            </option>
+
+                            <option value="diwaniyah">
+                                الديوانية
+                            </option>
+
+                            <option value="halabja">
+                                حلبجة
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="competition-form-group">
+
+                        <label for="competitionEducationType">
+                            نوع الدراسة
+                        </label>
+
+                        <select
+                            id="competitionEducationType"
+                            name="educationType"
+                            required
+                        >
+
+                            <option value="">
+                                اختيار النوع
+                            </option>
+
+                            <option value="school">
+                                مدرسة
+                            </option>
+
+                            <option value="university">
+                                جامعة
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="competitionSchoolFields"
+                        class="competition-school-fields"
+                    >
+
+                        <div class="competition-form-group">
+
+                            <label for="competitionSchool">
+                                المدرسة
+                            </label>
+
+                            <input
+                                type="text"
+                                id="competitionSchool"
+                                name="school"
+                                placeholder="اسم المدرسة"
+                            >
+
+                        </div>
+
+
+                        <div class="competition-form-group">
+
+                            <label for="competitionSchoolLevel">
+                                المرحلة الدراسية
+                            </label>
+
+                            <select
+                                id="competitionSchoolLevel"
+                                name="schoolLevel"
+                            >
+
+                                <option value="">
+                                    اختيار المرحلة
+                                </option>
+
+                                <option value="primary">
+                                    ابتدائي
+                                </option>
+
+                                <option value="middle">
+                                    اعدادي
+                                </option>
+
+                                <option value="secondary">
+                                    ثانوي
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="competitionUniversityFields"
+                        class="competition-university-fields"
+                        hidden
+                    >
+
+                        <div class="competition-form-group">
+
+                            <label for="competitionUniversity">
+                                الجامعة
+                            </label>
+
+                            <input
+                                type="text"
+                                id="competitionUniversity"
+                                name="university"
+                                placeholder="اسم الجامعة"
+                                >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="competition-form-group">
+
+                        <label for="competitionPublicName">
+                            ظهور الاسم
+                        </label>
+
+                        <select
+                            id="competitionPublicName"
+                            name="publicName"
+                        >
+
+                            <option value="public">
+                                الاسم ظاهر في الترتيب
+                            </option>
+
+                            <option value="private">
+                                اسم خاص / مستعار
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="competition-form-check">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="competitionRulesAgreement"
+                                required
+                            >
+
+                            <span>
+                                أوافق على قواعد المسابقة
+                                وشروط المشاركة.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        id="competitionFormMessage"
+                        class="competition-form-message"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        id="submitCompetitionRegistration"
+                        class="competition-submit-button"
+                    >
+                        تأكيد التسجيل
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RULES MODAL
+             ===================================================== -->
+
+        <div
+            id="competitionRulesModal"
+            class="competition-modal"
+            hidden
+        >
+
+            <div
+                class="competition-modal-overlay"
+                id="closeCompetitionRulesOverlay"
+            ></div>
+
+            <div
+                class="competition-modal-content competition-rules-modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="competitionRulesTitle"
+            >
+
+                <button
+                    type="button"
+                    id="closeCompetitionRules"
+                    class="competition-modal-close"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+                <div class="competition-modal-heading">
+
+                    <span>♜</span>
+
+                    <div>
+                        <span class="competition-section-kicker">
+                            RULES
+                        </span>
+
+                        <h2 id="competitionRulesTitle">
+                            قواعد المسابقة
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="competition-full-rules">
+
+                    <div class="competition-rule-item">
+                        <span>01</span>
+                        <div>
+                            <h3>المشاركة</h3>
+                            <p>
+                                المسابقة مخصصة للمشاركين المقيمين
+                                أو الدارسين داخل العراق.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="competition-rule-item">
+                        <span>02</span>
+                        <div>
+                            <h3>البيانات</h3>
+                            <p>
+                                يجب إدخال الاسم الثلاثي والبيانات
+                                الدراسية والمحافظة بشكل صحيح.
+                            </p>
+                            </div>
+                    </div>
+
+                    <div class="competition-rule-item">
+                        <span>03</span>
+                        <div>
+                            <h3>الخصوصية</h3>
+                            <p>
+                                يمكن تحديد ما إذا كان الاسم الرسمي
+                                أو الاسم المستعار سيظهر في الترتيب.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="competition-rule-item">
+                        <span>04</span>
+                        <div>
+                            <h3>الفرق</h3>
+                            <p>
+                                يمكن لكل حساب الانضمام إلى فريق واحد فقط.
+                                ولا يمكن إنشاء فريق جديد بعد الانضمام
+                                إلى فريق.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="competition-rule-item">
+                        <span>05</span>
+                        <div>
+                            <h3>النجوم</h3>
+                            <p>
+                                تختلف قيمة النجوم حسب نوع المشاركة،
+                                وتظهر ضمن الترتيب الفردي وترتيب الفريق.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="competition-rule-item">
+                        <span>06</span>
+                        <div>
+                            <h3>تحذير</h3>
+                            <p>
+                                اذا وجد اي غش في المسابقه او محاولات تخريب سيحظر الشخص من المسابقه ويعاقب
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer class="competition-footer">
+
+            <a href="home.html">
+                ✦ Venus
+            </a>
+
+            <span>
+                مساحة للإنجاز والإبداع.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         SCRIPTS
+         ========================================================= -->
+
+    <script src="team.js"></script>
+    <script src="profile.js"></script>
+    <script src="competition.js"></script>
+
+</body>
+
+</html>

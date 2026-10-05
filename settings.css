@@ -1,0 +1,791 @@
+/* =========================================================
+   VENUS — SETTINGS PAGE
+   Red + Gold / Arabic RTL / Responsive
+   ========================================================= */
+:root {
+    --settings-red: #8f1d2c;
+    --settings-red-dark: #65121e;
+    --settings-red-light: #b83245;
+    --settings-gold: #c69a3a;
+    --settings-gold-light: #e4c36b;
+    --settings-gold-dark: #9d7625;
+    --settings-cream: #f8f2e7;
+    --settings-paper: #fffdf8;
+    --settings-white: #ffffff;
+    --settings-text: #2f2521;
+    --settings-muted: #766b65;
+    --settings-border: #e3d8c8;
+    --settings-success: #477653;
+    --settings-danger: #a32932;
+    --settings-shadow:
+        0 10px 30px rgba(54, 35, 24, 0.09);
+    --settings-shadow-hover:
+        0 16px 38px rgba(54, 35, 24, 0.14);
+    --settings-radius: 20px;
+}
+/* =========================================================
+   PAGE
+   ========================================================= */
+.venus-settings-page {
+    width: 100%;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(198, 154, 58, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            var(--settings-cream) 0%,
+            #fdfaf4 100%
+        );
+    color: var(--settings-text);
+    direction: rtl;
+    padding-bottom: 50px;
+}
+/* =========================================================
+   HEADER
+   ========================================================= */
+.settings-header {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 34px 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.settings-back {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--settings-border);
+    border-radius: 14px;
+    background: var(--settings-paper);
+    color: var(--settings-red);
+    text-decoration: none;
+    font-size: 22px;
+    box-shadow: var(--settings-shadow);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.settings-back:hover {
+    transform: translateY(-2px);
+    background: var(--settings-red);
+    color: var(--settings-white);
+    box-shadow: var(--settings-shadow-hover);
+}
+.settings-title-area {
+    flex: 1;
+}
+.settings-eyebrow {
+    margin: 0 0 5px;
+    color: var(--settings-gold-dark);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+.settings-title {
+    margin: 0;
+    color: var(--settings-red-dark);
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+.settings-subtitle {
+    margin: 8px 0 0;
+    color: var(--settings-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+.venus-settings-page > section,
+.venus-settings-page > .settings-section,
+.venus-settings-page > .settings-danger-section {
+    width: min(900px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+}
+.settings-section {
+    margin-top: 20px;
+    background: var(--settings-paper);
+    border: 1px solid var(--settings-border);
+    border-radius: var(--settings-radius);
+    box-shadow: var(--settings-shadow);
+    overflow: hidden;
+}
+.settings-section-title {
+    padding: 22px 24px 10px;
+    color: var(--settings-red-dark);
+    font-size: 18px;
+    font-weight: 800;
+}
+.settings-section-description {
+    padding: 0 24px 16px;
+    color: var(--settings-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+/* =========================================================
+   SETTING ROW
+   ========================================================= */
+.settings-row {
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border: 0;
+    border-top: 1px solid var(--settings-border);
+    background: transparent;
+    color: inherit;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        padding-right 0.2s ease;
+}
+.settings-row:hover {
+    background: rgba(198, 154, 58, 0.055);
+    padding-right: 28px;
+}
+.settings-row-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(143, 29, 44, 0.08);
+    color: var(--settings-red);
+    font-size: 20px;
+}
+.settings-row-content {
+    flex: 1;
+    min-width: 0;
+}
+.settings-row-title {
+    display: block;
+    color: var(--settings-text);
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+.settings-row-description {
+    display: block;
+    margin-top: 3px;
+    color: var(--settings-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+.settings-row-arrow {
+    color: var(--settings-gold-dark);
+    font-size: 22px;
+    transition: transform 0.2s ease;
+}
+.settings-row:hover .settings-row-arrow {
+    transform: translateX(-3px);
+}
+/* =========================================================
+   TOGGLE ROWS
+   ========================================================= */
+.settings-toggle-row {
+    cursor: default;
+}
+.settings-toggle-row:hover {
+    padding-right: 24px;
+}
+.settings-toggle {
+    position: relative;
+    width: 50px;
+    height: 28px;
+    flex: 0 0 50px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 999px;
+    background: #d7cec2;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+.settings-toggle::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 3px;
+    right: 3px;
+    border-radius: 50%;
+    background: var(--settings-white);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+    transition:
+        transform 0.25s ease;
+}
+.settings-toggle:checked {
+    background: var(--settings-red);
+    box-shadow:
+        0 0 0 3px rgba(143, 29, 44, 0.09);
+}
+.settings-toggle:checked::after {
+    transform: translateX(-22px);
+}
+.settings-toggle:focus-visible {
+    outline: 3px solid rgba(198, 154, 58, 0.35);
+    outline-offset: 3px;
+}
+/* =========================================================
+   SELECT
+   ========================================================= */
+.settings-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.settings-select {
+    min-width: 125px;
+    padding: 10px 13px;
+    border: 1px solid var(--settings-border);
+    border-radius: 11px;
+    background: var(--settings-white);
+    color: var(--settings-text);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.settings-select:focus {
+    border-color: var(--settings-gold);
+    box-shadow:
+        0 0 0 3px rgba(198, 154, 58, 0.12);
+}
+/* =========================================================
+   ACCOUNT / USER INFORMATION
+   ========================================================= */
+.settings-account-preview {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.settings-account-avatar {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    background:
+        linear-gradient(
+            135deg,
+            var(--settings-red),
+            var(--settings-gold)
+        );
+    border: 2px solid rgba(198, 154, 58, 0.45);
+}
+.settings-account-name {
+    color: var(--settings-text);
+    font-size: 15px;
+    font-weight: 800;
+}
+.settings-account-username {
+    margin-top: 2px;
+    color: var(--settings-muted);
+    font-size: 12px;
+}
+/* =========================================================
+   DANGER SECTION
+   ========================================================= */
+.settings-danger-section {
+    margin-top: 28px;
+    background: var(--settings-paper);
+    border: 1px solid rgba(163, 41, 50, 0.22);
+    border-radius: var(--settings-radius);
+    box-shadow: var(--settings-shadow);
+    overflow: hidden;
+}
+.settings-danger-section 
+.settings-section-title {
+    color: var(--settings-danger);
+}
+.settings-danger-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    border: 0;
+    border-top: 1px solid rgba(163, 41, 50, 0.14);
+    background: transparent;
+    color: var(--settings-danger);
+    font-family: inherit;
+    text-align: right;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        padding-right 0.2s ease;
+}
+.settings-danger-row:hover {
+    background: rgba(163, 41, 50, 0.055);
+    padding-right: 28px;
+}
+.settings-danger-row .settings-row-icon {
+    background: rgba(163, 41, 50, 0.09);
+    color: var(--settings-danger);
+}
+.settings-danger-row .settings-row-title {
+    color: var(--settings-danger);
+}
+.settings-danger-row .settings-row-description {
+    color: var(--settings-muted);
+}
+/* =========================================================
+   MODALS
+   ========================================================= */
+.settings-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.settings-modal.is-open {
+    display: flex;
+}
+.settings-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 20, 16, 0.58);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.settings-modal-card {
+    position: relative;
+    z-index: 2;
+    width: min(560px, 100%);
+    max-height: min(760px, calc(100vh - 40px));
+    overflow-y: auto;
+    background: var(--settings-paper);
+    border: 1px solid var(--settings-border);
+    border-radius: 22px;
+    box-shadow:
+        0 25px 70px rgba(35, 20, 16, 0.25);
+    animation: settingsModalIn 0.22s ease both;
+}
+@keyframes settingsModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+.settings-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--settings-border);
+}
+.settings-modal-title {
+    flex: 1;
+    margin: 0;
+    color: var(--settings-red-dark);
+    font-size: 20px;
+    font-weight: 800;
+}
+.settings-modal-close {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--settings-border);
+    border-radius: 11px;
+    background: var(--settings-white);
+    color: var(--settings-muted);
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+.settings-modal-close:hover {
+    background: rgba(143, 29, 44, 0.08);
+    color: var(--settings-red);
+    border-color: rgba(143, 29, 44, 0.25);
+}
+/* =========================================================
+   ACCOUNT MODAL
+   ========================================================= */
+.settings-account-details {
+    padding: 24px;
+}
+.settings-account-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--settings-border);
+}
+.settings-account-profile-avatar {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    background:
+        linear-gradient(
+            135deg,
+            var(--settings-red),
+            var(--settings-gold)
+        );
+    border: 3px solid rgba(198, 154, 58, 0.5);
+}
+.settings-account-profile-name {
+    color: var(--settings-red-dark);
+    font-size: 19px;
+    font-weight: 800;
+}
+.settings-account-profile-username {
+    margin-top: 4px;
+    color: var(--settings-muted);
+    font-size: 13px;
+}
+.settings-account-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+.settings-account-info {
+    padding: 15px;
+    border: 1px solid var(--settings-border);
+    border-radius: 14px;
+    background: rgba(198, 154, 58, 0.035);
+}
+.settings-account-info-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--settings-muted);
+    font-size: 11px;
+    font-weight: 700;
+}
+.settings-account-info-value {
+    display: block;
+    color: var(--settings-text);
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+/* =========================================================
+   DELETE ACCOUNT MODAL
+   ========================================================= */
+.settings-delete-content {
+    padding: 26px 24px;
+}
+.settings-delete-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(163, 41, 50, 0.09);
+    color: var(--settings-danger);
+    font-size: 27px;
+}
+.settings-delete-title {
+    margin: 0;
+    color: var(--settings-danger);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+.settings-delete-text {
+    margin: 12px auto 0;
+    max-width: 430px;
+    color: var(--settings-muted);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.settings-delete-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+.settings-button {
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 750;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+.settings-button:hover {
+    transform: translateY(-1px);
+}
+.settings-button-secondary {
+    border: 1px solid var(--settings-border);
+    background: var(--settings-white);
+    color: var(--settings-text);
+}
+.settings-button-secondary:hover {
+    box-shadow: var(--settings-shadow);
+}
+.settings-button-danger {
+    border: 1px solid var(--settings-danger);
+    background: var(--settings-danger);
+    color: var(--settings-white);
+}
+.settings-button-danger:hover {
+    box-shadow:
+        0 7px 20px rgba(163, 41, 50, 0.22);
+}
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.settings-footer {
+    width: min(900px, calc(100% - 32px));
+    margin: 34px auto 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--settings-border);
+    text-align: center;
+    color: var(--settings-muted);
+    font-size: 12px;
+}
+.settings-footer-brand {
+    color: var(--settings-red);
+    font-weight: 800;
+}
+/* =========================================================
+   DARK MODE SUPPORT
+   ========================================================= */
+body.dark-mode .venus-settings-page {
+    --settings-cream: #171313;
+    --settings-paper: #211b1a;
+    --settings-white: #292221;
+    --settings-text: #f2e9df;
+    --settings-muted: #b9aaa0;
+    --settings-border: #403531;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(198, 154, 58, 0.08),
+            transparent 30%
+        ),
+        #171313;
+}
+body.dark-mode .settings-back,
+body.dark-mode .settings-select,
+body.dark-mode .settings-modal-close,
+body.dark-mode .settings-button-secondary {
+    background: #292221;
+    color: var(--settings-text);
+}
+body.dark-mode .settings-account-info {
+    background: rgba(198, 154, 58, 0.055);
+}
+body.dark-mode .settings-toggle {
+    background: #514641;
+}
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+@media (max-width: 700px) {
+    .settings-header {
+        padding-top: 24px;
+    }
+    .settings-row {
+        padding: 15px 18px;
+    }
+    .settings-row:hover {
+        padding-right: 21px;
+    }
+    .settings-section-title {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    .settings-section-description {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    .settings-toggle-row:hover {
+    padding-right: 18px;
+    }
+    .settings-danger-row {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    .settings-danger-row:hover {
+        padding-right: 21px;
+    }
+    .settings-account-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+@media (max-width: 480px) {
+    .venus-settings-page > section,
+    .venus-settings-page > .settings-section,
+    .venus-settings-page > .settings-danger-section,
+    .settings-footer {
+        width: min(100% - 20px, 900px);
+    }
+    .settings-header {
+        width: calc(100% - 20px);
+        gap: 12px;
+        padding-top: 18px;
+        padding-bottom: 14px;
+    }
+    .settings-back {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+    }
+    .settings-eyebrow {
+        font-size: 11px;
+    }
+    .settings-title {
+        font-size: 27px;
+    }
+    .settings-subtitle {
+        font-size: 13px;
+    }
+    .settings-section,
+    .settings-danger-section {
+        border-radius: 16px;
+    }
+    .settings-row {
+        min-height: 68px;
+        gap: 11px;
+        padding: 13px 15px;
+    }
+    .settings-row:hover {
+        padding-right: 17px;
+    }
+    .settings-row-icon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+        border-radius: 11px;
+        font-size: 17px;
+    }
+    .settings-row-title {
+        font-size: 13px;
+    }
+    .settings-row-description {
+        font-size: 11px;
+    }
+    .settings-row-arrow {
+        font-size: 19px;
+    }
+    .settings-toggle {
+        width: 45px;
+        height: 26px;
+        flex-basis: 45px;
+    }
+    .settings-toggle::after {
+        width: 20px;
+        height: 20px;
+        top: 3px;
+        right: 3px;
+    }
+    .settings-toggle:checked::after {
+        transform: translateX(-19px);
+    }
+    .settings-select {
+        min-width: 92px;
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+    .settings-modal {
+        padding: 10px;
+    }
+    .settings-modal-card {
+        max-height: calc(100vh - 20px);
+        border-radius: 18px;
+    }
+    .settings-modal-header {
+        padding: 17px 16px;
+    }
+    .settings-modal-title {
+        font-size: 17px;
+    }
+    .settings-account-details {
+        padding: 18px 16px;
+    }
+    .settings-account-profile {
+        gap: 12px;
+    }
+    .settings-account-profile-avatar {
+        width: 60px;
+        height: 60px;
+        flex-basis: 60px;
+    }
+    .settings-account-profile-name {
+        font-size: 16px;
+    }
+    .settings-account-info {
+        padding: 12px;
+    }
+    .settings-delete-content {
+        padding: 22px 16px;
+    }
+    .settings-delete-actions {
+        flex-direction: column-reverse;
+    }
+    .settings-button {
+        width: 100%;
+    }
+    .settings-footer {
+        margin-top: 25px;
+    }
+}
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    .settings-back,
+    .settings-row,
+    .settings-danger-row,
+    .settings-toggle,
+    .settings-toggle::after,
+    .settings-row-arrow,
+    .settings-button,
+    .settings-modal-card {
+        transition: none !important;
+        animation: none !important;
+    }
+}

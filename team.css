@@ -1,0 +1,834 @@
+/* =========================================================
+   VENUS — TEAM.CSS
+   Team Page Styling
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.venus-team-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 6%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.venus-team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.venus-team-header h1 {
+    margin: 8px 0;
+
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.venus-team-header p {
+    margin: 0;
+
+    max-width: 600px;
+
+    line-height: 1.8;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.venus-section-label {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #c89b3c;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.venus-primary-button {
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a31313,
+            #720909
+        );
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.venus-primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(114, 9, 9, 0.25);
+}
+
+.venus-primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.venus-team-section {
+    margin-bottom: 45px;
+}
+
+.venus-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.venus-section-heading h2 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+.venus-section-heading span {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.venus-team-search {
+    margin-bottom: 30px;
+}
+
+#teamSearch {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 16px 20px;
+
+    border: 1px solid rgba(200, 155, 60, 0.3);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: inherit;
+
+    font-size: 15px;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#teamSearch:focus {
+    border-color: #c89b3c;
+
+    box-shadow:
+        0 0 0 3px rgba(200, 155, 60, 0.1);
+}
+
+#teamSearch::placeholder {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+.venus-teams-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(260px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   TEAM CONTAINER
+   ========================================================= */
+
+.venus-team-container {
+    min-height: 20px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+   ========================================================= */
+
+.venus-team-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        rgba(200, 155, 60, 0.2);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    cursor: pointer;
+}
+
+.venus-team-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(200, 155, 60, 0.55);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   TEAM AVATAR
+   ========================================================= */
+
+.venus-team-card-avatar {
+    width: 68px;
+    height: 68px;
+
+    min-width: 68px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a31313,
+            #5f0808
+        );
+
+    color: #c89b3c;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.venus-team-card-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   TEAM INFO
+   ========================================================= */
+
+.venus-team-card-info {
+    min-width: 0;
+}
+
+.venus-team-card-info h3 {
+    margin: 0 0 6px;
+
+    font-size: 18px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.venus-team-card-info p {
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    opacity: 0.65;
+}
+
+.venus-team-card-info small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   TEAM META
+   ========================================================= */
+
+.venus-team-meta {
+    display: flex;
+
+    gap: 14px;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.venus-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.venus-modal[hidden] {
+    display: none;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.venus-modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    backdrop-filter:
+        blur(7px);
+}
+
+
+/* =========================================================
+   MODAL CARD
+   ========================================================= */
+
+.venus-modal-card {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(500px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    padding: 32px;
+
+    border:
+        1px solid
+        rgba(200, 155, 60, 0.3);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1c0808,
+            #100505
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   MODAL CLOSE
+   ========================================================= */
+
+.venus-modal-close {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: inherit;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
+}
+
+.venus-modal-close:hover {
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   MODAL TITLE
+   ========================================================= */
+
+.venus-modal-card h2 {
+    margin:
+        10px 0 8px;
+
+    font-size: 28px;
+}
+
+.venus-modal-card > p {
+    margin:
+        0 0 25px;
+
+    opacity: 0.65;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.venus-modal-card label {
+    display: block;
+
+    margin:
+        18px 0 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.venus-modal-card input,
+.venus-modal-card textarea,
+.venus-modal-card select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid
+        rgba(200, 155, 60, 0.22);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease;
+}
+
+.venus-modal-card textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.venus-modal-card input:focus,
+.venus-modal-card textarea:focus,
+.venus-modal-card select:focus {
+    border-color:
+        #c89b3c;
+}
+
+.venus-modal-card select option {
+    background: #160606;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.venus-form-message {
+    margin:
+        15px 0;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.venus-form-message.error {
+    background:
+        rgba(170, 20, 20, 0.15);
+
+    border:
+        1px solid
+        rgba(170, 20, 20, 0.3);
+}
+
+.venus-form-message.success {
+    background:
+        rgba(200, 155, 60, 0.12);
+
+    border:
+        1px solid
+        rgba(200, 155, 60, 0.3);
+}
+
+
+/* =========================================================
+   TEAM DETAILS
+   ========================================================= */
+
+.venus-team-details {
+    width: min(600px, 100%);
+}
+
+.venus-team-details-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.venus-team-details-avatar {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a31313,
+            #5f0808
+        );
+
+    color: #c89b3c;
+
+    font-size: 32px;
+}
+
+.venus-team-details-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.venus-team-details-title h2 {
+    margin: 0 0 6px;
+}
+
+.venus-team-details-title p {
+    margin: 0;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   MEMBERS
+   ========================================================= */
+
+.venus-team-members {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.venus-team-member {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+.venus-member-avatar {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        #6d0909;
+
+    color: #c89b3c;
+}
+
+.venus-member-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.venus-member-info {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.venus-member-info strong {
+    font-size: 14px;
+}
+
+.venus-member-info span {
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   OWNER
+   ========================================================= */
+
+.venus-team-owner {
+    margin-right: auto;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(200, 155, 60, 0.12);
+
+    color: #c89b3c;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TEAM ACTIONS
+   ========================================================= */
+
+.venus-team-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.venus-team-actions button {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.venus-team-empty {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border:
+        1px dashed
+        rgba(200, 155, 60, 0.25);
+
+    border-radius: 16px;
+
+    opacity: 0.65;
+}
+
+.venus-team-empty h3 {
+    margin:
+        0 0 8px;
+}
+
+.venus-team-empty p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .venus-team-page {
+        padding: 25px 18px;
+    }
+
+    .venus-team-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-bottom: 35px;
+    }
+
+    .venus-team-header h1 {
+        font-size: 38px;
+    }
+
+    .venus-primary-button {
+        width: 100%;
+    }
+
+    .venus-teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .venus-modal-card {
+        padding: 25px 20px;
+    }
+
+}

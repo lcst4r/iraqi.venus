@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>المنشورات — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feed.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         VENUS — FEED
+         ===================================================== -->
+
+    <main
+        class="venus-feed-page"
+        data-feed-page
+    >
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <section class="feed-header">
+
+            <div class="feed-title-area">
+
+                <span class="feed-title-symbol">
+                    ✦
+                </span>
+
+                <div>
+
+                    <h1>
+                        المنشورات
+                    </h1>
+
+                    <p>
+                        أفكار، إنجازات، مشاريع وتجارب من مجتمع Venus.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CREATE POST
+             ================================================= -->
+
+        <section class="create-post-card">
+
+            <div class="create-post-top">
+
+                <div
+                    class="create-post-avatar"
+                    id="feedCurrentUserAvatar"
+                >
+                    V
+                </div>
+
+                <button
+                    type="button"
+                    id="openCreatePost"
+                    class="create-post-input"
+                >
+                    شارك فكرة أو إنجازًا أو مشروعًا...
+                </button>
+
+            </div>
+
+
+            <div class="create-post-actions">
+
+                <button
+                    type="button"
+                    class="quick-post-button"
+                    data-post-type="article"
+                >
+                    <span>✎</span>
+                    <span>مقال</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-post-button"
+                    data-post-type="volunteering"
+                >
+                    <span>♧</span>
+                    <span>تطوع</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-post-button"
+                    data-post-type="project"
+                >
+                    <span>◆</span>
+                    <span>مشروع</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-post-button"
+                    data-post-type="achievement"
+                >
+                    <span>★</span>
+                    <span>إنجاز</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEED FILTERS
+             ================================================= -->
+
+        <nav
+            class="feed-filters"
+            aria-label="تصفية المنشورات"
+        >
+
+            <button
+                type="button"
+                class="feed-filter active"
+                data-feed-filter="all"
+            >
+                الكل
+            </button>
+
+            <button
+                type="button"
+                class="feed-filter"
+                data-feed-filter="article"
+            >
+                مقالات
+            </button>
+
+            <button
+                type="button"
+                class="feed-filter"
+                data-feed-filter="volunteering"
+            >
+                تطوع
+            </button>
+
+            <button
+                type="button"
+                class="feed-filter"
+                data-feed-filter="project"
+            >
+                مشاريع
+            </button>
+
+            <button
+                type="button"
+                class="feed-filter"
+                data-feed-filter="achievement"
+            >
+                إنجازات
+            </button>
+
+        </nav>
+
+
+        <!-- =================================================
+             FEED STATUS
+             ================================================= -->
+
+        <div
+            id="feedStatus"
+            class="feed-status"
+            aria-live="polite"
+        >
+            أحدث المنشورات
+        </div>
+
+
+        <!-- =================================================
+             POSTS
+             ================================================= -->
+
+        <section
+            id="feedPosts"
+            class="feed-posts"
+            aria-live="polite"
+        >
+            <!-- rendered by feed.js -->
+        </section>
+
+
+        <!-- =================================================
+             EMPTY STATE
+             ================================================= -->
+
+        <section
+            id="feedEmpty"
+            class="feed-empty"
+            hidden
+        >
+
+            <div class="feed-empty-icon">
+                ✦
+            </div>
+
+            <h2>
+                لا توجد منشورات بعد
+            </h2>
+
+            <p>
+                شارك أول فكرة أو إنجاز أو مشروع في Venus.
+            </p>
+
+            <button
+                type="button"
+                id="emptyCreatePost"
+                class="primary-feed-button"
+            >
+                إنشاء منشور
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             LOADING
+             ================================================= -->
+
+        <div
+            id="feedLoading"
+            class="feed-loading"
+            hidden
+        >
+            جاري تحميل المنشورات...
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         CREATE POST MODAL
+         ===================================================== -->
+
+    <div
+        id="createPostModal"
+        class="feed-modal"
+        hidden
+    >
+
+        <div
+            class="feed-modal-overlay"
+            id="closeCreatePostOverlay"
+        ></div>
+
+
+        <section
+            class="feed-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="createPostTitle"
+        >
+
+            <button
+                type="button"
+                id="closeCreatePost"
+                class="feed-modal-close"
+                aria-label="إغلاق"
+            >
+                ×
+            </button>
+
+
+            <div class="feed-modal-header">
+
+                <span class="feed-modal-symbol">
+                    ✦
+                </span>
+
+                <div>
+
+                    <h2 id="createPostTitle">
+                        إنشاء منشور
+                    </h2>
+
+                    <p>
+                        شارك شيئًا يستحق أن يُرى.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- POST TYPE -->
+
+            <div class="post-type-selector">
+
+                <label>
+                    نوع المنشور
+                </label>
+
+                <div class="post-type-options">
+
+                    <button
+                        type="button"
+                        class="post-type-option active"
+                        data-create-type="article"
+                    >
+                        <span>✎</span>
+                        مقال
+                    </button>
+
+                    <button
+                        type="button"
+                        class="post-type-option"
+                        data-create-type="volunteering"
+                    >
+                        <span>♧</span>
+                        تطوع
+                    </button>
+
+                    <button
+                        type="button"
+                        class="post-type-option"
+                        data-create-type="project"
+                    >
+                        <span>◆</span>
+                        مشروع
+                    </button>
+                    <button
+                        type="button"
+                        class="post-type-option"
+                        data-create-type="achievement"
+                    >
+                        <span>★</span>
+                        إنجاز
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="feed-form-group">
+
+                <label for="postTitle">
+                    العنوان
+                </label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    maxlength="120"
+                    placeholder="اكتب عنوان المنشور..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="feed-form-group">
+
+                <label for="postContent">
+                    المحتوى
+                </label>
+
+                <textarea
+                    id="postContent"
+                    rows="7"
+                    maxlength="5000"
+                    placeholder="اكتب ما تريد مشاركته..."
+                ></textarea>
+
+                <div
+                    class="feed-character-count"
+                    id="postCharacterCount"
+                >
+                    0 / 5000
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="feed-form-group">
+
+                <label for="postImage">
+                    صورة
+                    <span>(اختياري)</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="postImage"
+                    accept="image/*"
+                >
+
+                <div
+                    id="postImagePreview"
+                    class="post-image-preview"
+                    hidden
+                >
+                    <img
+                        id="postImagePreviewImg"
+                        src=""
+                        alt="معاينة الصورة"
+                    >
+
+                    <button
+                        type="button"
+                        id="removePostImage"
+                    >
+                        إزالة الصورة
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- VISIBILITY -->
+
+            <div class="feed-form-group">
+
+                <label for="postPrivacy">
+                    ظهور المنشور
+                </label>
+
+                <select id="postPrivacy">
+
+                    <option value="public">
+                        عام — يمكن للجميع رؤيته
+                    </option>
+
+                    <option value="private">
+                        خاص — يظهر في ملفي فقط
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FORM MESSAGE -->
+
+            <div
+                id="postFormMessage"
+                class="feed-form-message"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="feed-modal-actions">
+
+                <button
+                    type="button"
+                    id="cancelCreatePost"
+                    class="secondary-feed-button"
+                >
+                    إلغاء
+                </button>
+
+                <button
+                    type="button"
+                    id="publishPostButton"
+                    class="primary-feed-button"
+                >
+                    نشر المنشور
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         POST DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        id="postDetailsModal"
+        class="feed-modal"
+        hidden
+    >
+
+        <div
+            class="feed-modal-overlay"
+            id="closePostDetailsOverlay"
+        ></div>
+
+
+        <section
+            class="feed-modal-content post-details-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="postDetailsTitle"
+            >
+
+            <button
+                type="button"
+                id="closePostDetails"
+                class="feed-modal-close"
+                aria-label="إغلاق"
+            >
+                ×
+            </button>
+
+            <article
+                id="postDetailsContainer"
+                class="post-details-container"
+            >
+                <!-- rendered by feed.js -->
+            </article>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="profile.js"></script>
+    <script src="team.js"></script>
+    <script src="feed.js"></script>
+
+    <script>
+        console.log("VENUS HTML IS WORKING");
+    </script>
+
+</body>
+
+</html>

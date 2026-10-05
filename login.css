@@ -1,0 +1,567 @@
+/* =========================================================
+   VENUS — LOGIN PAGE
+   ========================================================= */
+
+:root {
+    --login-red: #8f1628;
+    --login-red-dark: #65101d;
+    --login-red-light: #b52a3d;
+
+    --login-gold: #c89b3c;
+    --login-gold-light: #e2c36d;
+    --login-gold-dark: #9a7020;
+
+    --login-cream: #f8f1e4;
+    --login-paper: #fffaf1;
+    --login-white: #ffffff;
+
+    --login-text: #2c2020;
+    --login-muted: #796d6d;
+    --login-border: #dfd2c3;
+
+    --login-shadow: 0 18px 45px rgba(60, 25, 25, 0.15);
+    --login-shadow-small: 0 8px 22px rgba(60, 25, 25, 0.10);
+
+    --login-radius: 20px;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.venus-login-page {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px 20px 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(200, 155, 60, 0.14),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #fffaf1 0%,
+            #f7eee2 50%,
+            #f3e5d5 100%
+        );
+
+    color: var(--login-text);
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-symbol {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 10px;
+
+    border: 1px solid rgba(200, 155, 60, 0.65);
+    border-radius: 50%;
+
+    color: var(--login-gold);
+    font-size: 28px;
+
+    background: rgba(255, 250, 241, 0.8);
+
+    box-shadow:
+        0 0 0 7px rgba(200, 155, 60, 0.06),
+        0 10px 25px rgba(80, 45, 20, 0.08);
+}
+
+.login-brand-name {
+    color: var(--login-red);
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 5px;
+
+    line-height: 1.1;
+}
+
+.login-brand-subtitle {
+    margin: 8px 0 0;
+
+    color: var(--login-muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 470px;
+
+    padding: 34px;
+
+    background: rgba(255, 250, 241, 0.96);
+
+    border: 1px solid var(--login-border);
+    border-radius: var(--login-radius);
+
+    box-shadow: var(--login-shadow);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.login-card-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--login-gold-dark);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-card-header h1 {
+    margin: 0;
+
+    color: var(--login-red);
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.login-card-header p {
+    margin: 9px 0 0;
+
+    color: var(--login-muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-field label {
+    color: var(--login-text);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login-field input {
+    width: 100%;
+    min-height: 52px;
+
+    box-sizing: border-box;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--login-border);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: var(--login-white);
+    color: var(--login-text);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.login-field input::placeholder {
+    color: #aaa0a0;
+}
+
+.login-field input:focus {
+    border-color: var(--login-gold);
+    background: #fffdf9;
+
+    box-shadow:
+        0 0 0 3px rgba(200, 155, 60, 0.12);
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.login-password-wrap {
+    position: relative;
+}
+
+.login-password-wrap input {
+    padding-left: 52px;
+}
+
+.login-password-toggle {
+    position: absolute;
+
+    left: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: var(--login-muted);
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.login-password-toggle:hover {
+    background: rgba(200, 155, 60, 0.10);
+    color: var(--login-red);
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.login-form-message {
+    min-height: 0;
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.login-form-message:not(:empty) {
+    padding: 10px 12px;
+    background: rgba(143, 22, 40, 0.07);
+    color: var(--login-red);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.login-submit-button {
+    width: 100%;
+    min-height: 52px;
+
+    margin-top: 2px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--login-red),
+            var(--login-red-dark)
+        );
+
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(143, 22, 40, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.login-submit-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 11px 24px rgba(143, 22, 40, 0.25);
+}
+
+.login-submit-button:active {
+    transform: translateY(0);
+}
+
+.login-submit-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   REGISTER AREA
+   ========================================================= */
+
+.login-register-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 25px;
+
+    color: var(--login-muted);
+
+    font-size: 14px;
+}
+
+.login-register-area a {
+    color: var(--login-red);
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.login-register-area a:hover {
+    color: var(--login-gold-dark);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.login-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin-top: 24px;
+
+    color: var(--login-muted);
+
+    font-size: 12px;
+}
+
+.login-footer a {
+    color: var(--login-red);
+
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    color: var(--login-gold-dark);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .venus-login-page {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(200, 155, 60, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #211719 0%,
+            #171214 100%
+        );
+
+    color: #f6eee3;
+}
+
+body.dark-mode .login-card {
+    background: rgba(38, 27, 29, 0.97);
+
+    border-color: rgba(226, 195, 109, 0.18);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.30);
+}
+
+body.dark-mode .login-symbol {
+    background: rgba(38, 27, 29, 0.8);
+}
+
+body.dark-mode .login-card-header h1,
+body.dark-mode .login-brand-name {
+    color: var(--login-gold-light);
+}
+
+body.dark-mode .login-card-header p,
+body.dark-mode .login-brand-subtitle,
+body.dark-mode .login-register-area,
+body.dark-mode .login-footer {
+    color: #bdb0ae;
+}
+
+body.dark-mode .login-field label {
+    color: #eee4dc;
+}
+
+body.dark-mode .login-field input {
+    background: #2d2224;
+
+    border-color: #4a3839;
+
+    color: #f7eee5;
+}
+
+body.dark-mode .login-field input::placeholder {
+    color: #897b7b;
+}
+
+body.dark-mode .login-field input:focus {
+    background: #312527;
+    border-color: var(--login-gold);
+}
+
+body.dark-mode .login-form-message:not(:empty) {
+    background: rgba(226, 195, 109, 0.08);
+    color: var(--login-gold-light);
+}
+
+body.dark-mode .login-register-area a,
+body.dark-mode .login-footer a {
+    color: var(--login-gold-light);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .venus-login-page {
+        padding: 30px 15px 24px;
+    }
+
+    .login-brand {
+        margin-bottom: 22px;
+    }
+
+    .login-symbol {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+    .login-brand-name {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .login-brand-subtitle {
+        font-size: 13px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+
+        border-radius: 17px;
+    }
+
+    .login-card-header h1 {
+        font-size: 24px;
+    }
+
+    .login-card-header p {
+        font-size: 13px;
+    }
+
+    .login-register-area {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .venus-login-page {
+        padding-inline: 10px;
+    }
+
+    .login-card {
+        padding: 22px 16px;
+    }
+
+    .login-card-header h1 {
+        font-size: 22px;
+    }
+
+    .login-field input {
+        min-height: 49px;
+    }
+
+    .login-submit-button {
+        min-height: 50px;
+    }
+}

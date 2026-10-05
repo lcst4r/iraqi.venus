@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>الإعدادات — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         VENUS — SETTINGS PAGE
+         ===================================================== -->
+
+    <main
+        class="venus-settings-page"
+        data-settings-page
+    >
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="settings-header">
+
+            <a
+                href="home.html"
+                class="settings-back"
+                aria-label="العودة للرئيسية"
+            >
+                ←
+            </a>
+
+            <div class="settings-title-area">
+
+                <p class="settings-eyebrow">
+                    VENUS
+                </p>
+
+                <h1 class="settings-title">
+                    الإعدادات
+                </h1>
+
+                <p class="settings-subtitle">
+                    التحكم في الحساب والخصوصية والمظهر
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
+        <div class="settings-container">
+
+            <!-- =============================================
+                 ACCOUNT
+                 ============================================= -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <span class="settings-section-icon">
+                        ◈
+                    </span>
+
+                    <div>
+                        <h2>
+                            الحساب
+                        </h2>
+
+                        <p>
+                            معلومات الحساب الأساسية
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <button
+                        type="button"
+                        class="settings-row"
+                        id="openAccountSettings"
+                    >
+
+                        <span class="settings-row-icon">
+                            ◎
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                معلومات الحساب
+                            </strong>
+
+                            <small>
+                                الاسم واسم المستخدم والمعلومات الشخصية
+                            </small>
+
+                        </span>
+
+                        <span class="settings-row-arrow">
+                            ‹
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-row"
+                        id="openProfileSettings"
+                    >
+
+                        <span class="settings-row-icon">
+                            ◉
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                الملف الشخصي
+                            </strong>
+
+                            <small>
+                                تعديل الملف الشخصي والصورة والمعلومات
+                            </small>
+
+                        </span>
+
+                        <span class="settings-row-arrow">
+                            ‹
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 PRIVACY
+                 ============================================= -->
+                 <section class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <span class="settings-section-icon">
+                        ✦
+                    </span>
+
+                    <div>
+                        <h2>
+                            الخصوصية
+                        </h2>
+
+                        <p>
+                            التحكم في ظهور معلومات الحساب
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="settings-row settings-row-static">
+
+                        <span class="settings-row-icon">
+                            ◇
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                ظهور الملف الشخصي
+                            </strong>
+
+                            <small>
+                                السماح للآخرين برؤية الملف الشخصي
+                            </small>
+
+                        </span>
+
+                        <label class="settings-switch">
+
+                            <input
+                                type="checkbox"
+                                id="profileVisibilityToggle"
+                                checked
+                            >
+
+                            <span class="settings-switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="settings-row settings-row-static">
+
+                        <span class="settings-row-icon">
+                            ☆
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                ظهور الاسم في المسابقة
+                            </strong>
+
+                            <small>
+                                تحديد ظهور الاسم في لوائح النتائج
+                            </small>
+
+                        </span>
+
+                        <label class="settings-switch">
+
+                            <input
+                                type="checkbox"
+                                id="competitionNameToggle"
+                                checked
+                            >
+
+                            <span class="settings-switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 NOTIFICATIONS
+                 ============================================= -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <span class="settings-section-icon">
+                        ♢
+                    </span>
+
+                    <div>
+                        <h2>
+                            الإشعارات
+                        </h2>
+
+                        <p>
+                            التحكم في إشعارات Venus
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="settings-row settings-row-static">
+
+                        <span class="settings-row-icon">
+                            ♧
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                الإشعارات العامة
+                            </strong>
+
+                            <small>
+                                إشعارات النشاط والتحديثات
+                            </small>
+
+                        </span>
+
+                        <label class="settings-switch">
+
+                            <input
+                                type="checkbox"
+                                id="notificationsToggle"
+                                checked
+                            >
+                            <span class="settings-switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="settings-row settings-row-static">
+
+                        <span class="settings-row-icon">
+                            ★
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                إشعارات الفريق
+                            </strong>
+
+                            <small>
+                                أخبار وتحديثات الفريق
+                            </small>
+
+                        </span>
+
+                        <label class="settings-switch">
+
+                            <input
+                                type="checkbox"
+                                id="teamNotificationsToggle"
+                                checked
+                            >
+
+                            <span class="settings-switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 APPEARANCE
+                 ============================================= -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <span class="settings-section-icon">
+                        ☼
+                    </span>
+
+                    <div>
+                        <h2>
+                            المظهر
+                        </h2>
+
+                        <p>
+                            تخصيص مظهر Venus
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="settings-row settings-row-static">
+
+                        <span class="settings-row-icon">
+                            ☾
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                الوضع الداكن
+                            </strong>
+
+                            <small>
+                                استخدام مظهر داكن للواجهة
+                            </small>
+
+                        </span>
+
+                        <label class="settings-switch">
+
+                            <input
+                                type="checkbox"
+                                id="darkModeToggle"
+                            >
+
+                            <span class="settings-switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="settings-row">
+
+                        <span class="settings-row-icon">
+                            A
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                اللغة
+                            </strong>
+
+                            <small>
+                                لغة واجهة Venus
+                            </small>
+
+                        </span>
+
+                        <select
+                            id="languageSelect"
+                            class="settings-select"
+                        >
+
+                            <option value="ar">
+                                العربية
+                            </option>
+
+                            <option value="en">
+                                English
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 DANGER ZONE
+                 ============================================= -->
+
+            <section class="settings-section settings-danger-section">
+
+                <div class="settings-section-heading">
+
+                    <span class="settings-section-icon">
+                        !
+                    </span>
+
+                    <div>
+                        <h2>
+                            الحساب
+                        </h2>
+
+                        <p>
+                            إجراءات الحساب
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card settings-danger-card">
+
+                    <button
+                        type="button"
+                        class="settings-row settings-danger-row"
+                        id="logoutButton"
+                    >
+
+                        <span class="settings-row-icon">
+                            ↪
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                تسجيل الخروج
+                            </strong>
+
+                            <small>
+                                الخروج من حساب Venus الحالي
+                            </small>
+
+                        </span>
+
+                        <span class="settings-row-arrow">
+                            ‹
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-row settings-delete-row"
+                        id="deleteAccountButton"
+                    >
+
+                        <span class="settings-row-icon">
+                            ×
+                        </span>
+
+                        <span class="settings-row-content">
+
+                            <strong>
+                                حذف الحساب
+                            </strong>
+
+                            <small>
+                                حذف بيانات الحساب من هذا الجهاز
+                            </small>
+
+                        </span>
+
+                        <span class="settings-row-arrow">
+                            ‹
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 FOOTER
+                 ============================================= -->
+
+            <footer class="settings-footer">
+
+                <div class="settings-footer-symbol">
+                    ✦
+                </div>
+
+                <strong>
+                    Venus
+                </strong>
+
+                <p>
+                    مساحة للأفكار، المشاريع، والإنجازات.
+                </p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         ACCOUNT MODAL
+         ===================================================== -->
+
+    <div
+        class="settings-modal"
+        id="accountSettingsModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="settings-modal-overlay"
+            id="closeAccountSettingsOverlay"
+        ></div>
+
+        <div class="settings-modal-box">
+
+            <div class="settings-modal-header">
+
+                <h2>
+                    معلومات الحساب
+                </h2>
+
+                <button
+                    type="button"
+                    class="settings-modal-close"
+                    id="closeAccountSettings"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="settings-account-preview">
+
+                <div
+                    class="settings-account-avatar"
+                    id="settingsAccountAvatar"
+                >
+                    V
+                </div>
+
+                <div>
+
+                    <strong id="settingsAccountName">
+                        متطوع Venus
+                    </strong>
+
+                    <span id="settingsAccountUsername">
+                        @venus_volunteer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-account-info">
+
+                <div>
+                    <span>
+                        العمر
+                    </span>
+
+                    <strong id="settingsAccountAge">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        المدرسة
+                    </span>
+
+                    <strong id="settingsAccountSchool">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        المحافظة
+                    </span>
+
+                    <strong id="settingsAccountGovernorate">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DELETE CONFIRMATION
+         ===================================================== -->
+
+    <div
+        class="settings-modal"
+        id="deleteAccountModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="settings-modal-overlay"
+            id="closeDeleteAccountOverlay"
+        ></div>
+
+        <div class="settings-modal-box settings-delete-modal">
+
+            <div class="settings-delete-icon">
+                !
+            </div>
+
+            <h2>
+                حذف الحساب؟
+            </h2>
+
+            <p>
+                سيتم حذف بيانات الحساب المحفوظة على هذا الجهاز.
+                لا يمكن التراجع عن هذا الإجراء.
+            </p>
+
+            <div class="settings-modal-actions">
+
+                <button
+                    type="button"
+                    class="settings-button settings-button-secondary"
+                    id="cancelDeleteAccount"
+                >
+                    إلغاء
+                </button>
+
+                <button
+                    type="button"
+                    class="settings-button settings-button-danger"
+                    id="confirmDeleteAccount"
+                >
+                    حذف الحساب
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="profile.js"></script>
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

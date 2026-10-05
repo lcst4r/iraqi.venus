@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#8f1d2c"
+    >
+
+    <title>الترتيب | Venus</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="rankings.css"
+    >
+</head>
+
+<body>
+
+    <main
+        class="venus-rankings-page"
+        data-rankings-page
+    >
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="rankings-header">
+
+            <a
+                href="home.html"
+                class="rankings-back"
+                aria-label="العودة إلى الرئيسية"
+            >
+                ←
+            </a>
+
+            <div class="rankings-title-area">
+
+                <p class="rankings-eyebrow">
+                    VENUS
+                </p>
+
+                <h1 class="rankings-title">
+                    الترتيب
+                </h1>
+
+                <p class="rankings-subtitle">
+                    تعرّف على أصحاب أعلى النجوم والفرق المتقدمة.
+                </p>
+
+            </div>
+
+            <div class="rankings-symbol">
+                ★
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CURRENT USER
+             ================================================= -->
+
+        <section class="rankings-user-card">
+
+            <div class="rankings-user-avatar">
+
+                <img
+                    id="rankingsUserAvatar"
+                    alt=""
+                >
+
+                <span
+                    id="rankingsUserInitial"
+                    class="rankings-user-initial"
+                >
+                    V
+                </span>
+
+            </div>
+
+            <div class="rankings-user-info">
+
+                <span class="rankings-user-label">
+                    ترتيبك
+                </span>
+
+                <strong
+                    id="rankingsUserName"
+                    class="rankings-user-name"
+                >
+                    متطوع Venus
+                </strong>
+
+                <span
+                    id="rankingsUserTeam"
+                    class="rankings-user-team"
+                >
+                    بدون فريق
+                </span>
+
+            </div>
+
+            <div class="rankings-user-stars">
+
+                <strong id="rankingsUserStars">
+                    0
+                </strong>
+
+                <span>
+                    ★
+                </span>
+
+            </div>
+
+            <div class="rankings-user-position">
+
+                <span>
+                    المركز
+                </span>
+
+                <strong id="rankingsUserPosition">
+                    —
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEADERBOARD SWITCH
+             ================================================= -->
+
+        <section class="rankings-switch-section">
+
+            <div
+                class="rankings-tabs"
+                role="tablist"
+                aria-label="نوع الترتيب"
+            >
+
+                <button
+                    type="button"
+                    class="rankings-tab is-active"
+                    data-ranking="individual"
+                    role="tab"
+                    aria-selected="true"
+                >
+                    <span class="rankings-tab-icon">
+                        ♙
+                    </span>
+
+                    الأفراد
+                </button>
+
+                <button
+                    type="button"
+                    class="rankings-tab"
+                    data-ranking="teams"
+                    role="tab"
+                    aria-selected="false"
+                >
+                    <span class="rankings-tab-icon">
+                        ♜
+                    </span>
+                    الفرق
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INDIVIDUAL RANKINGS
+             ================================================= -->
+
+        <section
+            id="individualRankingsSection"
+            class="rankings-board-section"
+        >
+
+            <div class="rankings-board-header">
+
+                <div>
+
+                    <p class="rankings-board-eyebrow">
+                        INDIVIDUAL
+                    </p>
+
+                    <h2>
+                        ترتيب الأفراد
+                    </h2>
+
+                    <p>
+                        الترتيب حسب مجموع النجوم المكتسبة.
+                    </p>
+
+                </div>
+
+                <div class="rankings-board-icon">
+                    ★
+                </div>
+
+            </div>
+
+            <div
+                id="individualRankingsList"
+                class="rankings-list"
+            ></div>
+
+            <div
+                id="individualRankingsEmpty"
+                class="rankings-empty"
+                hidden
+            >
+
+                <div class="rankings-empty-icon">
+                    ★
+                </div>
+
+                <h3>
+                    لا يوجد ترتيب بعد
+                </h3>
+
+                <p>
+                    عندما تبدأ المشاركات واكتساب النجوم،
+                    سيظهر الترتيب هنا.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TEAM RANKINGS
+             ================================================= -->
+
+        <section
+            id="teamRankingsSection"
+            class="rankings-board-section"
+            hidden
+        >
+
+            <div class="rankings-board-header">
+
+                <div>
+
+                    <p class="rankings-board-eyebrow">
+                        TEAMS
+                    </p>
+
+                    <h2>
+                        ترتيب الفرق
+                    </h2>
+
+                    <p>
+                        مجموع نجوم أعضاء كل فريق.
+                    </p>
+
+                </div>
+
+                <div class="rankings-board-icon">
+                    ♜
+                </div>
+
+            </div>
+
+            <div
+                id="teamRankingsList"
+                class="rankings-list"
+            ></div>
+
+            <div
+                id="teamRankingsEmpty"
+                class="rankings-empty"
+                hidden
+            >
+
+                <div class="rankings-empty-icon">
+                    ♜
+                </div>
+
+                <h3>
+                    لا يوجد ترتيب للفرق بعد
+                </h3>
+
+                <p>
+                    أنشئ فريقًا أو انضم إلى فريق
+                    وابدأوا بجمع النجوم.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STAR GUIDE
+             ================================================= -->
+
+        <section class="rankings-star-guide">
+
+            <div class="rankings-star-guide-header">
+
+                <div class="rankings-star-guide-symbol">
+                    ★
+                </div>
+
+                <div>
+
+                    <h2>
+                        كيف تُكتسب النجوم؟
+                    </h2>
+
+                    <p>
+                        كل مساهمة تضيف قيمة إلى ترتيبك.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="rankings-star-grid">
+
+                <article class="rankings-star-item">
+
+                    <span class="rankings-star-item-icon">
+                        ✎
+                    </span>
+
+                    <div>
+                        <strong>
+                            مقال
+                        </strong>
+
+                        <span>
+                            +1 نجمة
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <article class="rankings-star-item">
+                <span class="rankings-star-item-icon">
+                        ♧
+                    </span>
+
+                    <div>
+                        <strong>
+                            تطوع
+                        </strong>
+
+                        <span>
+                            +3 نجوم
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <article class="rankings-star-item">
+
+                    <span class="rankings-star-item-icon">
+                        ◆
+                    </span>
+
+                    <div>
+                        <strong>
+                            مشروع كبير
+                        </strong>
+
+                        <span>
+                            +5 نجوم
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <article class="rankings-star-item">
+
+                    <span class="rankings-star-item-icon">
+                        ★
+                    </span>
+
+                    <div>
+                        <strong>
+                            إنجاز أو مسابقة أخرى
+                        </strong>
+
+                        <span>
+                            +5 نجوم
+                        </span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REFRESH
+             ================================================= -->
+
+        <div class="rankings-refresh-wrapper">
+
+            <button
+                type="button"
+                id="refreshRankings"
+                class="rankings-refresh-button"
+            >
+                <span>
+                    ↻
+                </span>
+
+                تحديث الترتيب
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="rankings-footer">
+
+            <span class="rankings-footer-brand">
+                Venus
+            </span>
+
+            <span>
+                — كل نجمة تمثل خطوة.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="team.js"></script>
+
+    <script src="profile.js"></script>
+
+    <script src="feed.js"></script>
+
+    <script src="competition.js"></script>
+
+    <script src="rankings.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>الإشعارات — Venus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <!-- =====================================================
+         VENUS — NOTIFICATIONS PAGE
+         ===================================================== -->
+    <main
+        class="venus-notifications-page"
+        data-notifications-page
+    >
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+        <section class="notifications-header">
+            <div class="notifications-heading">
+                <span class="notifications-symbol">✦</span>
+                <div>
+                    <h1>الإشعارات</h1>
+                    <p>
+                        كل جديد يخص حسابك ونشاطك في Venus.
+                    </p>
+                </div>
+            </div>
+            <button
+                type="button"
+                id="markAllNotifications"
+                class="notifications-mark-all"
+            >
+                تحديد الكل كمقروء
+            </button>
+        </section>
+        <!-- =================================================
+             FILTERS
+             ================================================= -->
+        <nav
+            class="notifications-filters"
+            aria-label="تصفية الإشعارات"
+        >
+            <button
+                type="button"
+                class="notification-filter active"
+                data-notification-filter="all"
+            >
+                الكل
+            </button>
+            <button
+                type="button"
+                class="notification-filter"
+                data-notification-filter="unread"
+            >
+                غير المقروءة
+            </button>
+            <button
+                type="button"
+                class="notification-filter"
+                data-notification-filter="team"
+            >
+                الفرق
+            </button>
+            <button
+                type="button"
+                class="notification-filter"
+                data-notification-filter="competition"
+            >
+                المسابقات
+            </button>
+            <button
+                type="button"
+                class="notification-filter"
+                data-notification-filter="activity"
+            >
+                النشاط
+            </button>
+        </nav>
+        <!-- =================================================
+             NOTIFICATION LIST
+             ================================================= -->
+        <section class="notifications-section">
+            <div
+                id="notificationsContainer"
+                class="notifications-container"
+                aria-live="polite"
+            >
+                <!-- notifications rendered by notifications.js -->
+            </div>
+            <!-- =================================================
+                 EMPTY STATE
+                 ================================================= -->
+            <div
+                id="notificationsEmpty"
+                class="notifications-empty"
+                hidden
+            >
+                <div class="notifications-empty-icon">
+                    ♡
+                </div>
+                <h2>لا توجد إشعارات</h2>
+                <p>
+                    عندما يحدث شيء جديد في حسابك،
+                    سيظهر هنا.
+                </p>
+            </div>
+        </section>
+        <!-- =================================================
+             LOADING
+             ================================================= -->
+        <div
+            id="notificationsLoading"
+            class="notifications-loading"
+            hidden
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </main>
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+    <script src="notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>البحث — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         VENUS — SEARCH PAGE
+         ===================================================== -->
+
+    <main
+        class="venus-search-page"
+        data-search-page
+    >
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <section class="search-header">
+
+            <div class="search-title-area">
+
+                <span class="search-title-symbol">
+                    ✦
+                </span>
+
+                <div>
+                    <h1>البحث</h1>
+
+                    <p>
+                        ابحث عن أشخاص، فرق، ومحتوى داخل Venus.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SEARCH BOX
+             ================================================= -->
+
+        <section class="search-box-section">
+
+            <form
+                id="venusSearchForm"
+                class="venus-search-form"
+                autocomplete="off"
+            >
+
+                <div class="search-input-wrapper">
+
+                    <span
+                        class="search-input-icon"
+                        aria-hidden="true"
+                    >
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="venusSearchInput"
+                        class="venus-search-input"
+                        placeholder="ابحث عن اسم، اسم مستخدم، فريق أو محتوى..."
+                        aria-label="البحث"
+                    >
+
+                    <button
+                        type="button"
+                        id="clearSearchButton"
+                        class="clear-search-button"
+                        aria-label="مسح البحث"
+                        hidden
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="searchButton"
+                    class="search-submit-button"
+                >
+                    بحث
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+             FILTERS
+             ================================================= -->
+
+        <nav
+            class="search-filters"
+            aria-label="نوع نتائج البحث"
+        >
+
+            <button
+                type="button"
+                class="search-filter active"
+                data-search-filter="all"
+            >
+                الكل
+            </button>
+
+            <button
+                type="button"
+                class="search-filter"
+                data-search-filter="users"
+            >
+                الأشخاص
+            </button>
+
+            <button
+                type="button"
+                class="search-filter"
+                data-search-filter="teams"
+            >
+                الفرق
+            </button>
+
+            <button
+                type="button"
+                class="search-filter"
+                data-search-filter="posts"
+            >
+                المنشورات
+            </button>
+
+            <button
+                type="button"
+                class="search-filter"
+                data-search-filter="projects"
+            >
+                المشاريع
+            </button>
+
+        </nav>
+
+
+        <!-- =================================================
+             SEARCH STATUS
+             ================================================= -->
+
+        <div
+            id="searchStatus"
+            class="search-status"
+            aria-live="polite"
+        >
+            ابدأ البحث للعثور على النتائج.
+        </div>
+
+
+        <!-- =================================================
+             RESULTS
+             ================================================= -->
+
+        <section
+            id="searchResults"
+            class="search-results"
+            aria-live="polite"
+        >
+
+            <!-- Results rendered by search.js -->
+
+        </section>
+
+
+        <!-- =================================================
+             EMPTY STATE
+             ================================================= -->
+
+        <section
+            id="searchEmpty"
+            class="search-empty"
+            hidden
+        >
+
+            <div class="search-empty-icon">
+                ⌕
+            </div>
+
+            <h2>لا توجد نتائج</h2>
+
+            <p>
+                جرّب كلمة أخرى أو غيّر نوع البحث.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             INITIAL STATE
+             ================================================= -->
+
+        <section
+            id="searchInitial"
+            class="search-initial"
+        >
+
+            <div class="search-initial-symbol">
+                ✦
+            </div>
+
+            <h2>ماذا تبحث عنه؟</h2>
+
+            <p>
+                اكتب اسمًا أو اسم مستخدم أو اسم فريق
+                للبدء.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPT
+         ===================================================== -->
+
+    <script src="team.js"></script>
+    <script src="search.js"></script>
+
+</body>
+
+</html>

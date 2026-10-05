@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VENUS — Create. Compete. Grow.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="logo">
+            <span class="logo-star">✦</span>
+            <span>VENUS</span>
+        </div>
+
+        <div class="header-search">
+            <input
+                type="search"
+                id="globalSearch"
+                placeholder="ابحث عن أشخاص، فرق، منشورات..."
+            >
+        </div>
+
+        <div class="header-actions">
+
+            <button id="languageButton" class="icon-button" title="اللغة">
+                EN
+            </button>
+
+            <button id="notificationButton" class="icon-button" title="الإشعارات">
+                ♢
+                <span id="notificationBadge" class="notification-badge">0</span>
+            </button>
+
+            <button id="messagesButton" class="icon-button" title="الرسائل">
+                ◇
+            </button>
+
+            <button id="headerProfileButton" class="profile-button" title="الملف الشخصي">
+                الملف الشخصي
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero-section">
+
+            <div class="hero-decoration hero-decoration-one">✦</div>
+            <div class="hero-decoration hero-decoration-two">✧</div>
+            <div class="hero-decoration hero-decoration-three">✦</div>
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    A PLACE TO CREATE, COMPETE & GROW
+                </p>
+
+                <h1>
+                    أهلاً بك في <span>VENUS</span>
+                </h1>
+
+                <p class="hero-description">
+                     مساحة تجمع الطلاب والطالبات في العراق
+                    لصناعة الإنجازات، مشاركة الأفكار، تكوين الفرق，
+                    والمنافسة على مستوى الوطن.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button id="joinVenusButton" class="primary-button">
+                        انضم إلى VENUS
+                    </button>
+
+                    <button id="exploreButton" class="secondary-button">
+                        استكشف المنصة
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK NAVIGATION
+        ========================== -->
+
+        <section class="quick-navigation">
+
+            <button class="quick-card" data-target="homeSection">
+                <span>⌂</span>
+                <strong>الرئيسية</strong>
+                <small>اكتشف ما يحدث في VENUS</small>
+            </button>
+
+            <button class="quick-card" data-target="competitionSection">
+                <span>✦</span>
+                <strong>المسابقة</strong>
+                <small>نافس على النجوم</small>
+            </button>
+
+            <button class="quick-card" data-target="teamsSection">
+                <span>♜</span>
+                <strong>الفرق</strong>
+                <small>كوّن فريقك وانضم إلى الآخرين</small>
+            </button>
+
+            <button class="quick-card" data-target="ideasSection">
+                <span>✧</span>
+                <strong>الأفكار</strong>
+                <small>شارك فكرتك مع مجتمع VENUS</small>
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             HOME / FEED
+        ========================== -->
+
+        <section id="homeSection" class="main-section home-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">VENUS COMMUNITY</p>
+                    <h2>آخر ما يحدث</h2>
+                    <p>
+                        منشورات، مقالات، إنجازات وأخبار من مجتمع VENUS.
+                        </p>
+                </div>
+
+                <div class="add-wrapper">
+
+                    <button id="addPostButton" class="add-button">
+                        +
+                    </button>
+
+                    <div id="addMenu" class="add-menu">
+
+                        <button data-create-type="post">
+                            <span>✦</span>
+                            منشور
+                        </button>
+
+                        <button data-create-type="article">
+                            <span>✎</span>
+                            مقال <small>+1 نجمة</small>
+                        </button>
+
+                        <button data-create-type="volunteer">
+                            <span>♧</span>
+                            عمل تطوعي <small>+3 نجوم</small>
+                        </button>
+
+                        <button data-create-type="project">
+                            <span>♜</span>
+                            مشروع / إنجاز كبير <small>+5 نجوم</small>
+                        </button>
+
+                        <button data-create-type="competition">
+                            <span>✧</span>
+                            مسابقة فرعية
+                        </button>
+
+                        <button data-create-type="other">
+                            <span>◇</span>
+                            إنجاز آخر
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="feed-controls">
+
+                <button class="feed-filter active" data-filter="for-you">
+                    لك
+                </button>
+
+                <button class="feed-filter" data-filter="volunteers">
+                    المتطوعون
+                </button>
+
+                <button class="feed-filter" data-filter="teams">
+                    الفرق
+                </button>
+
+                <button class="feed-filter" data-filter="articles">
+                    المقالات
+                </button>
+
+            </div>
+
+
+            <div id="feedContainer" class="feed-container">
+
+                <div class="empty-state">
+
+                    <div class="empty-state-icon">✦</div>
+
+                    <h3>مساحتك تبدأ هنا</h3>
+
+                    <p>
+                        عندما يبدأ مجتمع VENUS بالنشر，
+                        ستظهر المنشورات والإنجازات هنا.
+                    </p>
+
+                    <button class="primary-button" id="emptyCreateButton">
+                        أنشئ أول منشور
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMPETITION
+        ========================== -->
+
+        <section id="competitionSection" class="main-section competition-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">VENUS COMPETITION</p>
+
+                    <h2>المسابقة السنوية</h2>
+
+                    <p>
+                        اجمع نجوم VENUS من إنجازاتك ونافس على مستوى العراق.
+                    </p>
+                </div>
+
+                <div class="competition-search">
+
+                    <input
+                        type="search"
+                        id="competitionSearch"
+                        placeholder="ابحث عن مشارك أو فريق..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="competition-season">
+
+                <div>
+                    <span>الموسم</span>
+                    <strong>VENUS 2026–2027</strong>
+                </div>
+
+                <div>
+                    <span>الحالة</span>
+                    <strong>المسابقة مفتوحة</strong>
+                </div>
+
+            </div>
+
+
+            <div class="ranking-tabs">
+
+                <button class="ranking-tab active" data-ranking="individual">
+                    الترتيب الفردي
+                </button>
+                <button class="ranking-tab" data-ranking="teams">
+                    ترتيب الفرق
+                </button>
+
+            </div>
+
+
+            <div class="ranking-preview">
+
+                <div class="ranking-card">
+
+                    <span class="ranking-number">01</span>
+
+                    <div class="ranking-user">
+                        <div class="avatar-placeholder">✦</div>
+
+                        <div>
+                            <strong>المشارك الأول</strong>
+                            <small>@username</small>
+                        </div>
+                    </div>
+
+                    <strong class="ranking-stars">
+                        0 ✦
+                    </strong>
+
+                </div>
+
+
+                <div class="ranking-card">
+
+                    <span class="ranking-number">02</span>
+
+                    <div class="ranking-user">
+                        <div class="avatar-placeholder">✦</div>
+
+                        <div>
+                            <strong>المشارك الثاني</strong>
+                            <small>@username</small>
+                        </div>
+                    </div>
+
+                    <strong class="ranking-stars">
+                        0 ✦
+                    </strong>
+
+                </div>
+
+
+                <div class="ranking-card">
+
+                    <span class="ranking-number">03</span>
+
+                    <div class="ranking-user">
+                        <div class="avatar-placeholder">✦</div>
+
+                        <div>
+                            <strong>المشارك الثالث</strong>
+                            <small>@username</small>
+                        </div>
+                    </div>
+
+                    <strong class="ranking-stars">
+                        0 ✦
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TEAMS
+        ========================== -->
+
+        <section id="teamsSection" class="main-section teams-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">VENUS TEAMS</p>
+
+                    <h2>الفرق والمجتمعات</h2>
+
+                    <p>
+                        اعثر على فريق يناسب اهتماماتك، أو أنشئ فريقك الخاص.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="team-intro-card">
+
+                <div class="team-intro-symbol">
+                    ♜
+                </div>
+
+                <div>
+
+                    <h3>فريق واحد. هدف واحد. إنجازات مشتركة.</h3>
+
+                    <p>
+                        يمكن لكل مشارك أن يكون عضوًا في فريق واحد فقط.
+                        إذا لم تكن ضمن فريق، يمكنك إنشاء فريق جديد.
+                    </p>
+
+                </div>
+
+                <button id="createTeamButton" class="primary-button">
+                    إنشاء فريق
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             IDEAS
+        ========================== -->
+
+        <section id="ideasSection" class="main-section ideas-section">
+
+            <div class="ideas-header">
+
+                <p class="section-kicker">YOUR VOICE MATTERS</p>
+
+                <h2>
+                    venus happy to hear your ideas, tell us if you need any help or if you have ideas in your mind
+                </h2>
+
+                <p>
+                    مساحة مفتوحة لاقتراح الأفكار، طلب المساعدة،
+                    إنشاء المشاريع والمسابقات، أو اقتراح تطويرات جديدة لـ VENUS.
+                </p>
+
+            </div>
+
+
+            <div class="idea-categories">
+
+                <button class="idea-category" data-idea-type="competition">
+                    مسابقة
+                </button>
+
+                <button class="idea-category" data-idea-type="project">
+                    مشروع كبير
+                </button>
+
+                <button class="idea-category" data-idea-type="help">
+                    أحتاج مساعدة
+                </button>
+                <button class="idea-category" data-idea-type="school">
+                    نشاط مدرسي
+                </button>
+
+                <button class="idea-category" data-idea-type="community">
+                    فكرة مجتمعية
+                </button>
+
+                <button class="idea-category" data-idea-type="environment">
+                    البيئة
+                </button>
+
+                <button class="idea-category" data-idea-type="venus">
+                    اقتراح لـ VENUS
+                </button>
+
+                <button class="idea-category" data-idea-type="other">
+                    شيء آخر
+                </button>
+
+            </div>
+
+
+            <button id="submitIdeaButton" class="primary-button">
+                شارك فكرتك
+            </button>
+
+        </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-logo">
+            ✦ VENUS
+        </div>
+
+        <p>
+            Create. Compete. Grow.
+        </p>
+
+        <p>
+            منصة طلابية عراقية لصناعة الإنجاز والمجتمع.
+        </p>
+
+        <small>
+            © <span id="footerYear"></span> VENUS. All rights reserved.
+        </small>
+
+    </footer>
+
+
+    <!-- =========================
+         LANGUAGE MODAL
+    ========================== -->
+
+    <div id="languageModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" data-close-modal="languageModal">
+                ×
+            </button>
+
+            <h2>اختر اللغة</h2>
+
+            <button class="language-option" data-language="ar">
+                العربية
+            </button>
+
+            <button class="language-option" data-language="en">
+                English
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MESSAGE MODAL
+    ========================== -->
+
+    <div id="messageModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" data-close-modal="messageModal">
+                ×
+            </button>
+
+            <div id="messageModalIcon" class="modal-icon">
+                ✦
+            </div>
+
+            <h2 id="messageModalTitle">
+                VENUS
+            </h2>
+
+            <p id="messageModalText">
+                قريبًا.
+            </p>
+
+            <button
+                class="primary-button"
+                data-close-modal="messageModal"
+            >
+                حسنًا
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CREATE POST MODAL
+    ========================== -->
+
+    <div id="createModal" class="modal">
+
+        <div class="modal-content large-modal">
+
+            <button class="modal-close" data-close-modal="createModal">
+                ×
+                </button>
+
+            <p class="section-kicker">
+                CREATE ON VENUS
+            </p>
+
+            <h2 id="createModalTitle">
+                أنشئ شيئًا جديدًا
+            </h2>
+
+            <p id="createModalDescription">
+                شارك شيئًا مع مجتمع VENUS.
+            </p>
+
+
+            <form id="createForm">
+
+                <label for="createTitle">
+                    العنوان
+                </label>
+
+                <input
+                    type="text"
+                    id="createTitle"
+                    name="title"
+                    placeholder="اكتب العنوان..."
+                    required
+                >
+
+
+                <label for="createDescription">
+                    الوصف
+                </label>
+
+                <textarea
+                    id="createDescription"
+                    name="description"
+                    rows="6"
+                    placeholder="اكتب التفاصيل هنا..."
+                    required
+                ></textarea>
+
+
+                <label for="evidenceFile">
+                    الدليل / الملفات
+                </label>
+
+                <input
+                    type="file"
+                    id="evidenceFile"
+                    name="evidence"
+                    multiple
+                >
+
+                <small class="form-note">
+                    يمكنك لاحقًا إضافة الصور والفيديوهات والملفات والروابط كأدلة على الإنجازات.
+                </small>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    نشر
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         IDEA MODAL
+    ========================== -->
+
+    <div id="ideaModal" class="modal">
+
+        <div class="modal-content large-modal">
+
+            <button class="modal-close" data-close-modal="ideaModal">
+                ×
+            </button>
+
+            <p class="section-kicker">
+                YOUR IDEA
+            </p>
+
+            <h2>
+                شارك فكرتك
+            </h2>
+
+            <p id="selectedIdeaType">
+                أخبرنا بما يدور في ذهنك.
+            </p>
+
+
+            <form id="ideaForm">
+
+                <label for="ideaTitle">
+                    عنوان الفكرة
+                </label>
+
+                <input
+                    type="text"
+                    id="ideaTitle"
+                    required
+                    placeholder="ما هي فكرتك؟"
+                >
+
+
+                <label for="ideaDescription">
+                    التفاصيل
+                </label>
+
+                <textarea
+                    id="ideaDescription"
+                    rows="7"
+                    required
+                    placeholder="اشرح فكرتك بالتفصيل..."
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    إرسال الفكرة
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="messages.js"></script>
+    <script src="teams.js"></script>
+
+</body>
+</html>

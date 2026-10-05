@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Venus — الرئيسية</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <main class="venus-home-page" data-home-page>
+
+        <!-- =====================================================
+             TOP NAVIGATION
+             ===================================================== -->
+
+        <header class="home-header">
+
+            <div class="home-brand">
+                <div class="venus-star-logo" aria-hidden="true">
+                    ✦
+                </div>
+
+                <div class="home-brand-text">
+                    <span class="home-brand-name">Venus</span>
+                    <span class="home-brand-subtitle">مساحة الأفكار والإنجازات</span>
+                </div>
+            </div>
+
+            <nav class="home-navigation" aria-label="التنقل الرئيسي">
+
+                <a href="home.html" class="home-nav-item active">
+                    <span class="home-nav-icon">⌂</span>
+                    <span>الرئيسية</span>
+                </a>
+
+                <a href="feed.html" class="home-nav-item">
+                    <span class="home-nav-icon">◈</span>
+                    <span>المنشورات</span>
+                </a>
+
+                <a href="team.html" class="home-nav-item">
+                    <span class="home-nav-icon">♧</span>
+                    <span>الفرق</span>
+                </a>
+
+                <a href="search.html" class="home-nav-item">
+                    <span class="home-nav-icon">⌕</span>
+                    <span>البحث</span>
+                </a>
+
+                <a href="notifications.html" class="home-nav-item home-notification-link">
+                    <span class="home-nav-icon">♢</span>
+                    <span>الإشعارات</span>
+                    <span id="homeNotificationBadge" class="home-notification-badge" hidden>0</span>
+                </a>
+
+                <a href="profile.html" class="home-nav-item">
+                    <span class="home-nav-icon">◉</span>
+                    <span>الملف الشخصي</span>
+                </a>
+
+            </nav>
+
+        </header>
+
+
+        <!-- =====================================================
+             HERO / WELCOME
+             ===================================================== -->
+
+        <section class="home-hero">
+
+            <div class="home-hero-decoration home-hero-decoration-one">
+                ✦
+            </div>
+
+            <div class="home-hero-decoration home-hero-decoration-two">
+                ✧
+            </div>
+
+            <div class="home-hero-content">
+
+                <div class="home-welcome-row">
+
+                    <div class="home-user-avatar" id="homeUserAvatar">
+                        <span id="homeUserAvatarLetter">V</span>
+                    </div>
+
+                    <div class="home-welcome-text">
+                        <span class="home-small-label">مرحبًا في Venus</span>
+                        <h1>
+                            <span id="homeUserName">متطوع Venus</span>
+                        </h1>
+                    </div>
+
+                </div>
+
+                <p class="home-hero-message">
+                    venus happy to hear your ideas, tell us if you need any help
+                    or if you have any ideas in your mind
+                </p>
+
+                <div class="home-hero-actions">
+
+                    <a href="feed.html" class="home-primary-button">
+                        <span>＋</span>
+                        <span>إضافة منشور</span>
+                    </a>
+
+                    <a href="search.html" class="home-secondary-button">
+                        <span>⌕</span>
+                        <span>استكشاف Venus</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="home-hero-star" aria-hidden="true">
+                ✦
+            </div>
+
+        </section>
+        <!-- =====================================================
+             QUICK ACTIONS
+             ===================================================== -->
+
+        <section class="home-section home-quick-section">
+
+            <div class="home-section-heading">
+                <div>
+                    <span class="home-section-kicker">Venus space</span>
+                    <h2>الوصول السريع</h2>
+                </div>
+
+                <span class="home-section-symbol">✦</span>
+            </div>
+
+            <div class="home-quick-grid">
+
+                <a href="feed.html" class="home-quick-card">
+                    <span class="home-quick-icon">◈</span>
+                    <div>
+                        <h3>المنشورات</h3>
+                        <p>أفكار، مقالات، تطوع وإنجازات.</p>
+                    </div>
+                    <span class="home-card-arrow">←</span>
+                </a>
+
+                <a href="team.html" class="home-quick-card">
+                    <span class="home-quick-icon">♧</span>
+                    <div>
+                        <h3>الفرق</h3>
+                        <p>تكوين فريق أو استكشاف الفرق.</p>
+                    </div>
+                    <span class="home-card-arrow">←</span>
+                </a>
+
+                <a href="profile.html" class="home-quick-card">
+                    <span class="home-quick-icon">◉</span>
+                    <div>
+                        <h3>الملف الشخصي</h3>
+                        <p>البيانات، النجوم والمشاريع.</p>
+                    </div>
+                    <span class="home-card-arrow">←</span>
+                </a>
+
+                <a href="search.html" class="home-quick-card">
+                    <span class="home-quick-icon">⌕</span>
+                    <div>
+                        <h3>البحث</h3>
+                        <p>العثور على أشخاص وفرق ومحتوى.</p>
+                    </div>
+                    <span class="home-card-arrow">←</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STATS
+             ===================================================== -->
+
+        <section class="home-section home-stats-section">
+
+            <div class="home-section-heading">
+                <div>
+                    <span class="home-section-kicker">Your Venus</span>
+                    <h2>المساحة الشخصية</h2>
+                </div>
+
+                <a href="profile.html" class="home-heading-link">
+                    عرض الملف ←
+                </a>
+            </div>
+
+            <div class="home-stats-grid">
+
+                <div class="home-stat-card">
+                    <span class="home-stat-icon">★</span>
+                    <div>
+                        <strong id="homeStars">0</strong>
+                        <span>نجمة</span>
+                    </div>
+                </div>
+
+                <div class="home-stat-card">
+                    <span class="home-stat-icon">◈</span>
+                    <div>
+                        <strong id="homePosts">0</strong>
+                        <span>منشور</span>
+                    </div>
+                </div>
+
+                <div class="home-stat-card">
+                    <span class="home-stat-icon">◆</span>
+                    <div>
+                        <strong id="homeProjects">0</strong>
+                        <span>مشروع</span>
+                    </div>
+                </div>
+
+                <div class="home-stat-card">
+                    <span class="home-stat-icon">♧</span>
+                    <div>
+                        <strong id="homeTeam">—</strong>
+                        <span>الفريق</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             IDEAS / MAIN VENUS FEATURES
+             ===================================================== -->
+
+        <section class="home-section home-ideas-section">
+
+            <div class="home-section-heading">
+            <div>
+                    <span class="home-section-kicker">Create something</span>
+                    <h2>مساحة الأفكار</h2>
+                </div>
+
+                <span class="home-section-symbol">✧</span>
+            </div>
+
+            <div class="home-ideas-grid">
+
+                <!-- Competition -->
+
+                <article class="home-idea-card home-idea-competition">
+
+                    <div class="home-idea-top">
+                        <span class="home-idea-icon">♛</span>
+                        <span class="home-idea-tag">المسابقة</span>
+                    </div>
+
+                    <div class="home-idea-content">
+                        <h3>المسابقة السنوية</h3>
+
+                        <p>
+                            مساحة سنوية للمشاركة بالأفكار والإنجازات
+                            وجمع النجوم والتنافس الفردي والجماعي.
+                        </p>
+
+                        <div class="home-idea-info">
+                            <span>★ نجوم</span>
+                            <span>♧ فرق</span>
+                            <span>◆ مشاريع</span>
+                        </div>
+                    </div>
+
+                    <a href="competition.html" class="home-idea-button">
+                        صفحة المسابقة
+                        <span>←</span>
+                    </a>
+
+                </article>
+
+
+                <!-- Big Project -->
+
+                <article class="home-idea-card home-idea-project">
+
+                    <div class="home-idea-top">
+                        <span class="home-idea-icon">◆</span>
+                        <span class="home-idea-tag">فكرة كبيرة</span>
+                    </div>
+
+                    <div class="home-idea-content">
+                        <h3>المشروع الكبير</h3>
+
+                        <p>
+                            لديك فكرة أكبر من منشور؟
+                            هذه المساحة لبناء المشاريع والمبادرات
+                            والأعمال التي تستحق أن ترى النور.
+                        </p>
+
+                        <div class="home-idea-info">
+                            <span>✦ فكرة</span>
+                            <span>◆ مشروع</span>
+                            <span>★ إنجاز</span>
+                        </div>
+                    </div>
+
+                    <a href="feed.html?create=project" class="home-idea-button">
+                        إنشاء مشروع
+                        <span>←</span>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TEAM PREVIEW
+             ===================================================== -->
+
+        <section class="home-section home-team-section">
+
+            <div class="home-section-heading">
+
+                <div>
+                    <span class="home-section-kicker">Together</span>
+                    <h2>الفريق</h2>
+                </div>
+
+                <a href="team.html" class="home-heading-link">
+                    استكشاف الفرق ←
+                </a>
+
+            </div>
+
+            <div id="homeTeamCard" class="home-team-card">
+
+                <div class="home-team-empty" id="homeTeamEmpty">
+
+                    <div class="home-team-empty-icon">
+                        ♧
+                    </div>
+
+                    <div>
+                        <h3>لا يوجد فريق حاليًا</h3>
+                        <p>
+                            يمكن إنشاء فريق جديد أو الانضمام إلى فريق موجود.
+                        </p>
+                    </div>
+
+                    <a href="team.html" class="home-outline-button">
+                        عرض الفرق
+                    </a>
+
+                </div>
+
+
+                <div class="home-team-content" id="homeTeamContent" hidden>
+
+                    <div class="home-team-symbol">
+                        ♧
+                    </div>
+
+                    <div class="home-team-information">
+                        <span class="home-team-label">الفريق الحالي</span>
+                        <h3 id="homeTeamName">—</h3>
+                        <p id="homeTeamDescription">
+                            —
+                        </p>
+                    </div>
+
+                    <div class="home-team-stars">
+                        <strong id="homeTeamStars">0</strong>
+                        <span>★</span>
+                    </div>
+
+                    <a href="team.html" class="home-outline-button">
+                        صفحة الفريق
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RECENT POSTS
+             ===================================================== -->
+
+        <section class="home-section home-recent-section">
+
+            <div class="home-section-heading">
+
+                <div>
+                    <span class="home-section-kicker">From Venus</span>
+                    <h2>أحدث المنشورات</h2>
+                </div>
+
+                <a href="feed.html" class="home-heading-link">
+                    عرض الكل ←
+                </a>
+
+            </div>
+
+            <div id="homeRecentPosts" class="home-recent-posts">
+
+                <div class="home-recent-empty" id="homeRecentEmpty">
+                    <span>◈</span>
+                    <p>
+                        لا توجد منشورات لعرضها حاليًا.
+                    </p>
+                    <a href="feed.html">
+                        استكشاف المنشورات
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer class="home-footer">
+
+            <div class="home-footer-brand">
+                <span class="venus-footer-star">✦</span>
+                <strong>Venus</strong>
+            </div>
+
+            <p>
+                مساحة للأفكار، الإنجازات، المشاريع والتعاون.
+            </p>
+
+            <div class="home-footer-links">
+                <a href="home.html">الرئيسية</a>
+                <a href="feed.html">المنشورات</a>
+                <a href="team.html">الفرق</a>
+                <a href="search.html">البحث</a>
+                <a href="profile.html">الملف الشخصي</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         SCRIPTS
+         ========================================================= -->
+
+    <script src="team.js"></script>
+    <script src="profile.js"></script>
+    <script src="notifications.js"></script>
+    <script src="feed.js"></script>
+    <script src="home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إنشاء حساب — Venus</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <main class="venus-register-page">
+
+        <!-- =====================================================
+             BRAND
+             ===================================================== -->
+
+        <section class="register-brand">
+
+            <div class="register-symbol" aria-hidden="true">
+                ✦
+            </div>
+
+            <div class="register-brand-name">
+                VENUS
+            </div>
+
+            <p class="register-brand-subtitle">
+                مساحة للأفكار، المشاريع، والإنجازات
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             REGISTER CARD
+             ===================================================== -->
+
+        <section class="register-card">
+
+            <div class="register-card-header">
+
+                <span class="register-eyebrow">
+                    مرحباً بك
+                </span>
+
+                <h1>
+                    إنشاء حساب
+                </h1>
+
+                <p>
+                    أنشئ حسابك وابدأ رحلتك في Venus
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORM
+                 ================================================= -->
+
+            <form
+                id="registerForm"
+                class="register-form"
+                novalidate
+            >
+
+                <!-- NAME -->
+
+                <div class="register-field">
+
+                    <label for="registerName">
+                        الاسم
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        name="name"
+                        placeholder="اكتب اسمك"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- USERNAME -->
+
+                <div class="register-field">
+
+                    <label for="registerUsername">
+                        اسم المستخدم
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        name="username"
+                        placeholder="مثال: venus_user"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <small>
+                        يمكن استخدام اسم المستخدم لتسجيل الدخول.
+                    </small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="register-field">
+
+                    <label for="registerEmail">
+                        البريد الإلكتروني
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+                <!-- AGE -->
+
+                <div class="register-field">
+
+                    <label for="registerAge">
+                        العمر
+                    </label>
+
+                    <input
+                        type="number"
+                        id="registerAge"
+                        name="age"
+                        placeholder="العمر"
+                        min="5"
+                        max="100"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+
+                <!-- GOVERNORATE -->
+
+                <div class="register-field">
+
+                    <label for="registerGovernorate">
+                        المحافظة
+                    </label>
+                    <select
+                        id="registerGovernorate"
+                        name="governorate"
+                    >
+
+                        <option value="">
+                            اختر المحافظة
+                        </option>
+
+                        <option value="baghdad">
+                            بغداد
+                        </option>
+
+                        <option value="basra">
+                            البصرة
+                        </option>
+
+                        <option value="nineveh">
+                            نينوى
+                        </option>
+
+                        <option value="anbar">
+                            الأنبار
+                        </option>
+
+                        <option value="erbil">
+                            أربيل
+                        </option>
+
+                        <option value="sulaymaniyah">
+                            السليمانية
+                        </option>
+
+                        <option value="duhok">
+                            دهوك
+                        </option>
+
+                        <option value="kirkuk">
+                            كركوك
+                        </option>
+
+                        <option value="salah_al_din">
+                            صلاح الدين
+                        </option>
+
+                        <option value="diyala">
+                            ديالى
+                        </option>
+
+                        <option value="wasit">
+                            واسط
+                        </option>
+
+                        <option value="babylon">
+                            بابل
+                        </option>
+
+                        <option value="karbala">
+                            كربلاء
+                        </option>
+
+                        <option value="najaf">
+                            النجف
+                        </option>
+
+                        <option value="qadisiyyah">
+                            القادسية
+                        </option>
+
+                        <option value="muthanna">
+                            المثنى
+                        </option>
+
+                        <option value="dhi_qar">
+                            ذي قار
+                        </option>
+
+                        <option value="maysan">
+                            ميسان
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SCHOOL -->
+
+                <div class="register-field">
+
+                    <label for="registerSchool">
+                        المدرسة أو الجامعة
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerSchool"
+                        name="school"
+                        placeholder="اسم المدرسة أو الجامعة"
+                        autocomplete="organization"
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="register-field">
+
+                    <label for="registerPassword">
+                        كلمة المرور
+                    </label>
+
+                    <div class="register-password-wrap">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="أنشئ كلمة مرور"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleRegisterPassword"
+                            class="register-password-toggle"
+                            aria-label="إظهار كلمة المرور"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="register-field">
+                <label for="registerConfirmPassword">
+                        تأكيد كلمة المرور
+                    </label>
+
+                    <div class="register-password-wrap">
+
+                        <input
+                            type="password"
+                            id="registerConfirmPassword"
+                            name="confirmPassword"
+                            placeholder="أعد كتابة كلمة المرور"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleRegisterConfirmPassword"
+                            class="register-password-toggle"
+                            aria-label="إظهار كلمة المرور"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIVACY -->
+
+                <div class="register-privacy-row">
+
+                    <input
+                        type="checkbox"
+                        id="registerPublicName"
+                        name="publicName"
+                    >
+
+                    <label for="registerPublicName">
+                        إظهار اسمي بشكل عام في Venus
+                    </label>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="registerFormMessage"
+                    class="register-form-message"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="registerButton"
+                    class="venus-button register-submit-button"
+                >
+                    إنشاء الحساب
+                </button>
+
+            </form>
+
+
+            <!-- =================================================
+                 LOGIN LINK
+                 ================================================= -->
+
+            <div class="register-login-area">
+
+                <span>
+                    لديك حساب بالفعل؟
+                </span>
+
+                <a href="login.html">
+                    تسجيل الدخول
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer class="register-footer">
+
+            <a href="index.html">
+                العودة إلى Venus
+            </a>
+
+            <span>•</span>
+
+            <span>
+                Venus
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="register.js"></script>
+
+</body>
+</html>
