@@ -2380,7 +2380,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openCreateModal(type = "post") {
         const modal =
-            $("#createModal");
+            $("#createPostModal");
 
         if (!modal) return;
 
@@ -3674,25 +3674,24 @@ document.addEventListener("DOMContentLoaded", () => {
         ?.addEventListener(
             "click",
             () => {
-                const menu =
-                    $("#addMenu");
-
-                if (!menu) return;
-
-                menu.classList.toggle(
-                    "active"
-                );
-
-                menu.hidden =
-                !menu.classList.contains(
-
-                        "active"
-
-                    );
-
+                window.location.href = "post.html";
             }
 
         );
+        const emptyPostButtons = [
+    "#emptyCreateButton",
+    "#emptyCreatePost",
+    "#feedEmptyCreateButton"
+];
+
+emptyPostButtons.forEach(selector => {
+    $(selector)?.addEventListener(
+        "click",
+        () => {
+            window.location.href = "post.html";
+        }
+    );
+});
 
     $$("[data-create-type]")
 
@@ -3704,31 +3703,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 () => {
 
-                    const type =
+                    console.log(
+                        "VENUS CREATE TYPE CLICKED:",
 
-                        button.dataset
+                        button.dataset.createType
+                    );
+                    alert(
+                        "CREATE TYPE WORKS: " +
 
-                            .createType;
-
-                    const menu =
-
-                        $("#addMenu");
-
-                    if (menu) {
-
-                        menu.classList.remove(
-
-                            "active"
-
-                        );
-
-                        menu.hidden = true;
-
-                    }
-
-                    openCreateModal(
-
-                        type
+                        button.dataset.createType
 
                     );
 
