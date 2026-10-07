@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إنشاء منشور — VENUS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         VENUS — CREATE POST PAGE
+         ===================================================== -->
+
+    <main class="venus-post-page">
+
+        <!-- Top bar -->
+        <header class="post-page-header">
+
+            <button
+                type="button"
+                class="post-back-button"
+                id="postBackButton"
+                aria-label="رجوع"
+            >
+                ←
+            </button>
+
+            <div class="post-page-title">
+                <span class="venus-star">✦</span>
+                <h1>إنشاء منشور</h1>
+            </div>
+
+        </header>
+
+
+        <!-- Main content -->
+        <section class="post-page-container">
+
+            <!-- Intro -->
+            <div class="post-intro">
+
+                <span class="post-intro-star">✦</span>
+
+                <div>
+                    <h2>شارك شيئًا جديدًا</h2>
+
+                    <p>
+                        اكتب فكرة، مقالًا، مشروعًا، إنجازًا أو تجربة تريد مشاركتها مع مجتمع VENUS.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Post type -->
+            <section class="post-section">
+
+                <label class="post-section-label">
+                    نوع المنشور
+                </label>
+
+                <div class="post-types" id="postTypes">
+
+                    <button
+                        type="button"
+                        class="post-type active"
+                        data-post-type="article"
+                    >
+                        <span class="post-type-icon">✎</span>
+                        <span>مقال</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="post-type"
+                        data-post-type="volunteering"
+                    >
+                        <span class="post-type-icon">✦</span>
+                        <span>تطوع</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="post-type"
+                        data-post-type="project"
+                    >
+                        <span class="post-type-icon">◇</span>
+                        <span>مشروع</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="post-type"
+                        data-post-type="achievement"
+                    >
+                        <span class="post-type-icon">♜</span>
+                        <span>إنجاز</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Form -->
+            <form id="postForm" class="post-form">
+
+                <!-- Title -->
+                <div class="post-field">
+
+                    <label for="postTitle">
+                        العنوان
+                    </label>
+
+                    <input
+                        type="text"
+                        id="postTitle"
+                        name="title"
+                        maxlength="150"
+                        placeholder="اكتب عنوان المنشور..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- Content -->
+                <div class="post-field">
+
+                    <div class="post-field-heading">
+
+                        <label for="postContent">
+                            المحتوى
+                        </label>
+
+                        <span id="postCharacterCount">
+                            0 / 5000
+                        </span>
+
+                    </div>
+
+                    <textarea
+                        id="postContent"
+                        name="content"
+                        maxlength="5000"
+                        rows="10"
+                        placeholder="اكتب ما تريد مشاركته..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Image -->
+                <div class="post-field">
+
+                    <label>
+                        صورة
+                        <span class="optional-text">(اختياري)</span>
+                    </label>
+
+                    <label
+                        for="postImage"
+                        class="post-image-upload"
+                        id="postImageUpload"
+                    >
+
+                        <span class="upload-icon">＋</span>
+
+                        <span>
+                            أضف صورة
+                        </span>
+
+                        <small>
+                            PNG أو JPG
+                        </small>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="postImage"
+                        name="image"
+                        accept="image/png,image/jpeg,image/webp"
+                        hidden
+                    >
+
+                    <div
+                        class="post-image-preview"
+                        id="postImagePreview"
+                        hidden
+                    >
+
+                        <img
+                            id="postImagePreviewImg"
+                            src=""
+                            alt="معاينة الصورة"
+                        >
+
+                        <button
+                            type="button"
+                            id="removePostImage"
+                            class="remove-image-button"
+                        >
+                            إزالة الصورة
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Privacy -->
+                <div class="post-field">
+
+                    <label for="postPrivacy">
+                        الخصوصية
+                    </label>
+
+                    <select id="postPrivacy" name="privacy">
+
+                        <option value="public">
+                            عام — يمكن للجميع رؤية المنشور
+                        </option>
+
+                        <option value="private">
+                            خاص — يظهر لك فقط
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Message -->
+                <div
+                    id="postFormMessage"
+                    class="post-form-message"
+                    hidden
+                ></div>
+
+
+                <!-- Buttons -->
+                <div class="post-form-actions">
+
+                    <button
+                        type="button"
+                        class="post-cancel-button"
+                        id="cancelPostButton"
+                    >
+                        إلغاء
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="post-publish-button"
+                        id="publishPostButton"
+                    >
+                        <span>نشر المنشور</span>
+                        <span class="publish-star">✦</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         VENUS — POST SCRIPT
+         ===================================================== -->
+
+    <script src="post.js"></script>
+
+</body>
+</html>

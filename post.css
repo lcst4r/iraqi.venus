@@ -1,0 +1,610 @@
+/* =========================================================
+   VENUS — POST PAGE
+   ========================================================= */
+
+.venus-post-page {
+    min-height: 100vh;
+    padding: 0 20px 60px;
+    background:
+        radial-gradient(circle at top right, rgba(180, 130, 35, 0.08), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(130, 20, 20, 0.07), transparent 30%);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.post-page-header {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border-bottom: 1px solid rgba(160, 120, 45, 0.25);
+}
+
+.post-back-button {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(160, 120, 45, 0.35);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: inherit;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.post-back-button:hover {
+    transform: translateX(3px);
+    background: rgba(160, 120, 45, 0.10);
+    border-color: rgba(160, 120, 45, 0.60);
+}
+
+.post-page-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-page-title h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.venus-star {
+    color: #c79b3b;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.post-page-container {
+    width: min(900px, 100%);
+    margin: 35px auto 0;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.post-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(160, 120, 45, 0.25);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    margin-bottom: 25px;
+}
+
+.post-intro-star {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(160, 120, 45, 0.12);
+
+    color: #c79b3b;
+    font-size: 22px;
+}
+
+.post-intro h2 {
+    margin: 0 0 7px;
+
+    font-size: 20px;
+}
+
+.post-intro p {
+    margin: 0;
+
+    line-height: 1.8;
+
+    opacity: 0.72;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.post-section {
+    margin-bottom: 25px;
+}
+
+.post-section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   POST TYPES
+   ========================================================= */
+
+.post-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.post-type {
+    min-height: 90px;
+
+    border: 1px solid rgba(160, 120, 45, 0.25);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.post-type:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(160, 120, 45, 0.55);
+
+    background: rgba(160, 120, 45, 0.07);
+}
+
+.post-type.active {
+    border-color: #b68a32;
+
+    background: rgba(160, 120, 45, 0.12);
+
+    box-shadow:
+        0 0 0 1px rgba(182, 138, 50, 0.12),
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.post-type-icon {
+    color: #c79b3b;
+    font-size: 24px;
+}
+
+.post-type span:last-child {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.post-form {
+    padding: 28px;
+
+    border: 1px solid rgba(160, 120, 45, 0.25);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.post-field {
+    margin-bottom: 23px;
+}
+
+.post-field > label,
+.post-field-heading label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.optional-text {
+    font-size: 12px;
+    opacity: 0.55;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FIELD HEADING
+   ========================================================= */
+
+.post-field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-field-heading label {
+    margin-bottom: 9px;
+}
+
+#postCharacterCount {
+    font-size: 12px;
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.post-field input[type="text"],
+.post-field textarea,
+.post-field select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(160, 120, 45, 0.25);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    color: inherit;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.post-field input[type="text"],
+.post-field select {
+    min-height: 48px;
+    padding: 0 14px;
+}
+
+.post-field textarea {
+    min-height: 190px;
+    padding: 14px;
+
+    resize: vertical;
+
+    line-height: 1.8;
+}
+
+.post-field input[type="text"]:focus,
+.post-field textarea:focus,
+.post-field select:focus {
+    border-color: rgba(182, 138, 50, 0.75);
+
+    background: rgba(255, 255, 255, 0.065);
+
+    box-shadow:
+        0 0 0 3px rgba(182, 138, 50, 0.09);
+}
+
+.post-field input::placeholder,
+.post-field textarea::placeholder {
+    color: currentColor;
+    opacity: 0.40;
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD
+   ========================================================= */
+
+.post-image-upload {
+    min-height: 130px;
+
+    border: 1px dashed rgba(160, 120, 45, 0.40);
+    border-radius: 15px;
+
+    background: rgba(160, 120, 45, 0.035);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.post-image-upload:hover {
+    background: rgba(160, 120, 45, 0.08);
+    border-color: rgba(160, 120, 45, 0.65);
+    transform: translateY(-1px);
+}
+
+.upload-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(160, 120, 45, 0.12);
+
+    color: #c79b3b;
+
+    font-size: 24px;
+}
+
+.post-image-upload span:not(.upload-icon) {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-image-upload small {
+    opacity: 0.5;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+   ========================================================= */
+
+.post-image-preview {
+    margin-top: 12px;
+
+    position: relative;
+}
+
+.post-image-preview img {
+    width: 100%;
+    max-height: 400px;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(160, 120, 45, 0.25);
+
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.remove-image-button {
+    margin-top: 9px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #a33;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.post-field select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.post-form-message {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(180, 40, 40, 0.08);
+
+    border: 1px solid rgba(180, 40, 40, 0.20);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.post-form-message.success {
+    background: rgba(80, 140, 70, 0.08);
+    border-color: rgba(80, 140, 70, 0.25);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.post-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+.post-cancel-button,
+.post-publish-button {
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.post-cancel-button {
+    border: 1px solid rgba(160, 120, 45, 0.25);
+
+    background: transparent;
+
+    color: inherit;
+}
+
+.post-cancel-button:hover {
+    background: rgba(160, 120, 45, 0.07);
+}
+
+.post-publish-button {
+    border: 1px solid #9c7225;
+
+    background: #9c7225;
+
+    color: #fff;
+}
+
+.post-publish-button:hover {
+    transform: translateY(-1px);
+
+    opacity: 0.92;
+}
+
+.publish-star {
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .venus-post-page {
+        padding: 0 13px 40px;
+    }
+
+    .post-page-header {
+        min-height: 70px;
+    }
+
+    .post-page-title h1 {
+        font-size: 21px;
+    }
+
+    .post-page-container {
+        margin-top: 22px;
+    }
+
+    .post-intro {
+        padding: 17px;
+    }
+
+    .post-types {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-form {
+        padding: 19px;
+    }
+
+    .post-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .post-cancel-button,
+    .post-publish-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .post-page-header {
+        gap: 11px;
+    }
+
+    .post-back-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-intro {
+        gap: 11px;
+    }
+
+    .post-intro-star {
+        width: 36px;
+        height: 36px;
+    }
+
+    .post-form {
+        padding: 15px;
+    }
+}
